@@ -1,0 +1,1014 @@
+@charset "utf-8";
+/* CSS Document */
+*{box-sizing: border-box;}
+
+/* Prevent ancher link content from being blocked by topnav */
+/* Ref: https://css-tricks.com/fixed-headers-on-page-links-and-overlapping-content-oh-my/ */
+html {
+	scroll-padding-top: 130px; /* height of sticky header */
+}
+  
+/* General body setting */
+body{
+	font-family: Arial, Copperplate Gothic Light;
+	padding: 0px; 
+	background-color: black; 
+}
+
+/* Style a button */
+button{
+	display: inline-block;
+	background-color: black;
+	padding: 10px;
+	width: 150px;
+	color: aliceblue;
+	text-align: center;
+	border: 4px double aliceblue; 
+	border-radius: 10px; 
+	font-size: 16px; 
+}
+
+button:hover{
+	background-color: dimgray; 
+}
+
+/* Header & top navigation */
+.topnav{
+	position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0; 
+	left: 0; 
+	right: 0;
+	background-color: black; 
+	padding: 0% 1%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border: 2px solid aliceblue; 
+	z-index: 10;
+}
+.topnav h1 a.hometitle, a.hometitle:link, a.hometitle:active, a.hometitle:visited{
+	font-size: 30px;
+	font-style: italic; 
+	text-decoration: none;
+	/* Ref: https://www.youtube.com/watch?v=C8paSmVFsVE */
+	background: linear-gradient(90deg, #000, aliceblue, #000);
+	background-repeat: no-repeat;
+	background-size: 80%;
+	animation: animate 2s linear infinite;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: rgba(255, 255, 255, 0.456);
+	cursor: pointer;
+}
+.topnav h1 a.hometitle:hover{
+    text-shadow: 0 0 1px #e9e9e9, 0 0 25px #d5d5d5, 0 0 40px #d0d0d0;
+}
+
+@keyframes animate{
+	0%{
+		background-position: -500%;
+	}
+	100%{
+		background-position: 500%;
+	}
+}
+
+/* Style the top navigation links*/
+.topnav .menu ul{
+	list-style: none;
+}
+
+.topnav .menu ul li{
+	position: relative;
+	float: left;
+} 
+
+.menu ul li a{
+	font-size: 24px;
+	font-style: italic; 
+	padding: 25px; 
+	text-decoration: none;
+	color: aliceblue; 
+	display: block; 
+}
+
+/* Change Color on Hover/visted*/
+.topnav .menu ul li a:hover{
+    text-shadow: 0 0 1px #e7e7e7, 0 0 25px #d3d3d3, 0 0 35px #c4c4c4;
+}
+
+.topnav .menu ul li a:visited{
+	color: darkgray;
+}
+
+/* Style the top navigation sub links*/
+.topnav .menu ul li ul{
+	position: absolute;
+	padding-left: 0%;
+	left: 0;
+	width: 140px;
+	background: transparent;
+	display: none;
+}
+
+.topnav .menu ul li ul li{
+	width: 100%;
+	border-top: 2px solid aliceblue;
+}
+
+.topnav .menu ul li ul li a:hover{
+	text-shadow: none;
+	text-decoration: underline;
+}
+
+.topnav .menu ul li:hover > ul{
+	display: initial;
+}
+
+#menu-option{
+	display: none;
+}
+
+.topnav label{
+	font-size: 24px;
+	color: aliceblue;
+	cursor: pointer;
+	display: none;
+}
+
+@media (max-width:980px){
+	.topnav{
+		padding: 20px;
+	}
+	.topnav label{
+		display: initial;
+	}
+
+	.topnav .menu{
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		background: black;
+		border-top: 1px solid aliceblue;
+		display: none;
+	}
+	
+	.topnav .menu ul li{
+		width: 100%;
+	}
+
+	.topnav .menu ul li ul{
+		position: relative;
+		width: 100%;
+		left: 0%;
+	}
+
+	.topnav .menu ul li ul li{
+		background-color: dimgray;
+	}
+
+	#menu-option:checked ~ .menu{
+		display: initial;
+	}
+}
+
+/* Fixed box/social media */
+.fixed{
+    position: fixed;
+    right: 5px;
+    bottom: 5%;
+    border: 3px solid black;
+    background: black;
+    z-index: 1;
+    color: aliceblue;
+	font-size: 24px;
+}
+.fixed a{
+    color: aliceblue;
+}
+.fixed a:visited{
+    color: gray;
+}
+.fixed a:hover{
+    color: lightgray; 
+}
+
+@media (max-width:980px){
+	.fixed{
+		font-size: 30px;
+	}
+}
+
+/* Home header styling */
+.header{
+    margin: auto; 
+    margin-top: 80px;
+    width: 70%;
+    background-image: url(headerImg.JPG); /* I chose this illustration of myself as the backgroud. I linked it directly from CSS instead of from HTML because this way the image is not stretched and I like the looping result. */
+	background-size: 700px 450px;
+    min-height: 450px;
+	text-align: center;
+	font-family: Copperplate Gothic Light;
+    font-size: 80px;
+    font-style: italic;
+	font-weight: bold;
+    color: aliceblue;
+	line-height:60px;
+}
+
+/* Layout adjustment for narrow screen (change direction of heading), but it didn't look good 
+@media (max-width: 1000px){
+	.header{
+		transform: rotate(90DEG);
+	}
+}
+*/
+
+/* About me page heading */
+.header1 h2{
+	margin-top: 80px;
+	font-size: 40px;
+	text-align: center; 
+	font-style: italic; 
+	color: aliceblue;
+}
+
+/* Work page heading */
+.header2 h2{
+	font-size: 40px;
+	text-align: left; 
+	font-style: italic; 
+	color: aliceblue;
+}
+
+/* Individual work page heading */
+.header3 h3{
+	margin-top: 100px;
+	margin-left: 20%;
+	font-size: 40px;
+	text-align: left; 
+	font-style: italic; 
+	color: aliceblue;
+	line-height: 34px;
+}
+
+/* Date of completion */
+.header3 p{
+	margin-left: 20%;
+	font-size: 24px;
+	text-align: left;
+	font-style: italic;
+	color: grey;
+	line-height: 1px;
+}
+
+/* Homepage about me section */
+.flex-container{
+	display: flex;
+	background-color: black;
+	margin-top: 300px;
+	border-style: solid; 
+	border-width: 2px; 
+	border-color: aliceblue; 
+}
+
+/* Photo container */
+.flexcontainer1{
+	width: 40%;
+	float: left;
+	display: block;
+	text-align: center;
+	padding-top: 9%;
+}
+
+/* Brief about me container */
+.flexcontainer2{
+	width: 60%;
+	float: left;
+	border-left: 2px solid aliceblue;
+	padding: 6% 5% 8% 5%;
+}
+
+.ml1 {
+	font-size: 34px; 
+	text-align: left;
+	color: aliceblue;
+	font-style: italic;
+	margin-right: 0%;
+	display: inline-block;
+  }
+  
+.ml1 .letter {
+	display: inline-block;
+	line-height: 1em;
+  }
+  
+.ml1 .text-wrapper {
+	position: relative;
+	display: inline-block;
+	padding-top: 0.1em;
+	padding-bottom: 0.15em;
+  }
+  
+.ml1 .line {
+	opacity: 1;
+	position: absolute;
+	left: 0;
+	height: 3px;
+	width: 100%;
+	background-color: aliceblue;
+	transform-origin: 0 0;
+  }
+  
+.ml1 .line1 { top: 0; }
+.ml1 .line2 { bottom: 0; }
+
+.flexcontainer2 p{
+	text-align: left;
+	font-size: 16px;
+	color: aliceblue;
+	padding-left: 3%;
+	padding-right: 3%;
+	line-height: 200%;
+}
+
+.mybtn{
+	margin-top: 7%;
+	text-align: center;
+}
+
+/* Layout adjustment for narrow screen (change flex direction to column) */
+/* Ref: https://www.youtube.com/watch?v=BvB8kSmgMcM */
+@media(max-width: 980px){
+	.flex-container{
+		flex-direction: column;
+	}
+	.flexcontainer1{
+		padding-top: 20%;
+		width: 100%;
+	}
+	.flexcontainer2{
+		width: 100%;
+		padding-bottom: 30%;
+		border: none;
+	}
+}
+
+/* Homepage gallery section */
+.container1 {
+    margin-top: 80px;
+	text-align: center;
+	margin-bottom: 20%;
+}
+
+.container1 .ml1{
+	text-align: left;
+	margin-left: 78%;
+}
+/*
+.container1 h4{
+	float: left;
+	font-size: 34px;
+    margin-left: 80%;
+	margin-top: 100px;
+	margin-bottom: 0%;
+	font-style: italic; 
+	color: white;
+}
+*/
+
+/* Float boxes for work highlight */
+.floatcontainer{
+	display: block;
+}
+.float{
+    float: left;
+    width:15%; /* I tried many width values and I like to have wider gaps between the images */
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    box-sizing: border-box;
+	/*border: 2px solid white;  They look better without any border lines*/
+    margin: 5%;
+	display: block;
+}
+.float img{
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+
+.float a:hover{
+	border: 2px solid aliceblue;
+}
+
+.container1 hr{
+    clear: both;
+    border: 0px;
+}
+
+/* Layout adjustment for narrow screen (reduce to 2 imgs/row) */
+@media (max-width:980px){
+	.container1 .ml1{
+		text-align: left;
+		margin-left: 57%;
+	}
+	.float{
+		margin-left: 10%;
+		width: 35%;
+	}
+}
+
+/* About me page content */
+.container2{	
+	margin: auto; 
+	width: 60%;
+	font-size: 20px;
+	text-align: left; 
+	line-height: 150%;
+	padding-top: 5px;
+	padding-bottom: 100px;
+	font-style: italic; 
+	color: aliceblue;
+}
+
+/* About me page timeline (time) */
+/* I believe it is easier and more efficient to have a timeline and be able to select what years to read*/
+.flex-container3{
+	display: flex;
+	margin-bottom: 200px;
+	margin-left: 20%;
+	width: 60%;
+}
+.flexcontainer3{
+	align-self: top;
+	float: left;
+	width: 25%;
+	text-align: center; 
+	line-height: 300%;
+}
+
+/*
+.verticalline{
+	margin-left: 30%;
+	float: left;
+	width: 5px;
+	border-left: 2px solid aliceblue;
+	height: 500px;
+} 
+*/
+
+.flexcontainer3 a{
+	margin-top: 44px;
+	margin-left: 10%;
+	color: grey;
+	font-size: 24px;
+	text-decoration: none;
+}
+
+.flexcontainer3 a:hover {
+	color: aliceblue;
+	font-size: 30px;
+}
+
+/* About me page timeline (experience) */
+.flexcontainer4{
+	position: left;
+	width: 75%;
+	border-left: 2px solid aliceblue;
+	font-style: italic; 
+	text-align: left; 
+	padding-left: 5%;
+	color: aliceblue;
+	display: block;
+}
+
+.flexcontainer4 h5{
+	margin-top: 50px;
+	margin-bottom: 10px;
+	font-size: 30px;
+	color: aliceblue;
+}
+
+.flexcontainer4 p{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: 18px;
+	line-height: 130%;
+}
+
+/* Layout adjustment for narrow screen (remove margin left & right) */
+@media (max-width:980px){
+	.container2{
+		width: 90%;
+	}
+	.flex-container3{
+		margin-left: 5%;
+		width: 90%;	
+		margin-right: 5%;	
+	}
+
+}
+
+/* Work page layout */
+.flexcontainer5{
+	display: flex;
+	margin: 80px 17% 0px 17%;
+	/*border-style: solid; 
+	border-width: 2px; 
+	border-color: white; */
+}
+
+.flexcontainer5 .header2{
+	width: 70%;
+}
+
+.flexcontainer5 .filterwork{
+	width: 30%;
+	padding-right: 0%;
+	padding-top: 50px;
+}
+
+.flexcontainer5 select{
+	float: right;
+	width: 115px;
+	height: 25px;
+}
+
+.flexcontainer5 label{
+	float: right;
+	color: aliceblue;
+	font-size: 24px;
+	margin-right: 20px;
+}
+
+/*
+.grid-row-span-2{
+	grid-row: span 2; extend work catalogue to both rows 
+}
+*/
+
+.flexcontainer6{
+	display: flex;
+	margin: 0px 17% 200px 17%;
+	/*border-style: solid; 
+	border-width: 2px; 
+	border-color:white; */
+}
+
+/* Work page work timeline */
+.container6{
+	align-self: top;
+	float: left;
+	width: 25%;
+	padding-top: 5%;
+	border-right: 3px solid aliceblue;
+	padding-left: 10%;
+	text-align: left; 
+	line-height: 500%;
+}
+
+/*
+.verticalline2{
+	margin-right: 15%;
+	float: left;
+	width: 5px;
+	border-left: 3px solid aliceblue;
+	height: 85%;
+} 
+*/
+
+.container6 a{
+	color: grey;
+	font-size: 30px;
+	text-decoration: none;
+}
+
+.container6 a:hover {
+	color: aliceblue;
+	font-size: 40px;
+}
+
+/* Work page work catalogue */
+.container5{
+	position: left;
+	display: block;
+	width: 75%;
+	padding-left: 5%;
+}
+
+/* Work catalogue year*/
+.container5 .year h5{
+	margin-left: 3%;
+	margin-bottom: 3%;
+	font-size: 30px;
+	font-style: italic;
+	text-align: left; 
+	color: aliceblue;
+}
+
+/* Work catalogue card (white background)*/
+.container5 .card3{
+	margin-left: 3%;
+	margin-bottom: 7%;
+	height: 250px;
+	background-color: white;
+}
+
+/* Work catalogue image*/
+.container5 .frame{
+	float: right;
+	margin-right: 5%;
+	width: 60%;
+	height: 100%;
+	overflow: hidden;
+	/*border-style: solid; 
+	border-width: 2px; 
+	border-color: black; */
+}
+.container5 .frame img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100%;
+}
+
+/* Work catalogue project title*/
+.container5 .title h6{
+	float: left;
+	width: 110px;
+	margin-top: 7%;
+	margin-right: 0%;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: left; 
+	transform: rotate(-90DEG);
+	color: black;
+}
+
+/* Work catalogue short description*/
+.container5 .description{
+	float: left;
+	width: 80px;
+	margin-left: 0%;
+	margin-top: 15%;
+	font-size: 14px;
+	font-style: italic;
+	text-align: left; 
+	color: grey;
+}
+
+/* Work catalogue learn more button*/
+.container5 button{
+	position: right;
+	background-color: black;
+	margin-left: 16%;
+	margin-top: 0%;
+	padding: 6px;
+	width: 81px;
+	color: aliceblue;
+	border: 3px double aliceblue; 
+	font-size: 12px; 
+}
+
+.container5 button:hover{
+	background-color: dimgray;
+}
+
+/* Layout adjustment for narrow screen (reduced margin for left & right) */
+@media (max-width: 1250px) and (min-width: 1050px){
+	.flexcontainer5{
+		margin: 80px 10% 0px 10%;
+	}
+	.flexcontainer6{
+		margin: 0px 10% 200px 10%;
+	}
+}
+@media (max-width:1050px){
+	.flexcontainer5{
+		margin: 80px 1% 0px 1%;
+	}
+	.flexcontainer6{
+		margin: 0px 1% 200px 1%;
+	}
+	.flexcontainer5 .header2{
+		width: 50%;
+	}
+	.flexcontainer5 .filterwork{
+		width: 50%;
+	}
+	.flexcontainer6 .container6{
+		width: 20%;
+		padding-left: 2%;
+	}
+	.flexcontainer6 .container5{
+		width: 80%;
+	}
+}
+
+/* Layout adjustment for narrow screen (remove brief description) */
+@media (max-width: 980px){
+	.container5 .title h6{
+		float: left;
+		width: 25%;
+		margin-left: 5%;
+		margin-right: 0%;
+		font-size: 20px;
+		font-weight: bold;
+		text-align: left; 
+		transform: none;
+		color: black;
+	}
+	.container5 .description{
+		display: none;
+	}
+	.container5 button{
+		float: left;
+		margin-left: 5%;
+		margin-right: 0%;
+		margin-bottom: 5%;
+		width: 25%;
+	}
+}
+
+/* Layout adjustment for narrow screen */
+@media (max-width:600px){
+	.container5 .card3{
+		height: 210px;
+	}
+	.container5 .title h6{
+		font-size: 18px;
+	}
+}
+
+/* Individual project(S) page content */
+.container7{
+	display: block;
+	text-align: center;
+	margin-bottom: 300px;
+}
+
+/* Image */
+.container7 img{
+	margin-top: 3%;
+}
+
+/* Video */
+.container7 video{
+	margin-top: 3%;
+}
+
+/* Description */
+.container7 p{
+	margin-top: 5%;
+	margin-left: 20%;
+	margin-right: 20%;
+	font-size: 20px;
+	color: aliceblue;
+}
+
+.container7 p a{
+	color: aliceblue;
+}
+
+.container7 p a:hover{
+	background-color: dimgray; 
+}
+
+.container7 p a:visited{
+	color: lightgray;
+}
+
+/* Layout adjustment for narrow screen (reduce margin left & right*/
+@media (max-width:980px){
+	.header3 h3{
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+	.header3 p{
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+	.container7 img{
+		width: 80%;
+	}
+	.container7 video{
+		width: 80%;
+	}
+	.container7 p{
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+}
+
+/* Web prac page*/
+.floatcontainer2{
+	margin-left: 10%;
+	width: 90%;
+	display: block;
+}
+
+.float2{
+	font-size: 20px;
+	margin-top: 5%;
+    float: left;
+    width:25%; 
+	aspect-ratio: 16/10;
+    box-sizing: border-box;
+	text-align: center;
+	display: block;
+}
+
+.float2 p{
+	padding-top: 15%;
+    display: inline-block;
+	text-align: center;
+    vertical-align: middle;
+}
+
+.float2 img{
+	margin-top: 0%;
+    float: left;
+    width: 100%;
+    height: 100%;
+	display: block;
+}
+
+/* Style links to the websites */
+.float2 a{
+	color: aliceblue;
+}
+.float2 a:hover{
+	background-color: dimgray; 
+}
+
+.float2 a:visited{
+	color: lightgray;
+}
+
+.container7 hr{
+    clear: both;
+    border: 0px;
+	margin-bottom: 300px;
+}
+
+/* Layout adjustment for narrow screen (reduce to 1 website/row) */
+@media (max-width:980px){
+	.float2{
+		width: 50%;
+	}
+}
+
+/* Footer */
+.footer{
+	padding:2px 2px 50px 2px;
+	text-align: center;
+	background: #ddd;
+}
+
+/* Footer contact me section */
+.footer .flex-container2{
+	margin: 0%;
+	display: flex;
+	background-color: black;
+	height: 550px;
+}
+
+/* Footer contact me (Inquiries & Feedback) */
+.footer .card1{
+	float: left;
+	width: 58%; 
+	border-right: 1px solid #ddd;
+}
+
+.footer .card1 h4{
+	text-align: left;
+	font-size: 34px;
+	margin-top: 7%;
+	margin-bottom: 0%;
+	font-style: italic; 
+	color: aliceblue;
+	display: inline-block;
+}
+
+.footer .card1 .container8{
+	float: left;
+	margin-left: 20%;
+	margin-top: 4%;
+	margin-bottom: 3%;
+	width: 70%;
+	background-color: white;
+	text-align: left;
+	padding: 3% 2% 5% 2%;
+}
+
+/* Contact me subject input field */
+.footer .card1 .container8 input{ 
+	float: left;
+	width: 40%;
+	height: 40px;
+	margin: 2%;
+}
+
+/* Contact me your contact input field */
+.footer .card1 .container8 .inputf2 input{
+	width: 52%;
+	height: 40px;
+	margin: 2%;
+}
+
+/* Contact me inquiries & Feedback textarea */
+.footer .card1 .container8 textarea{
+	width: 96%;
+	height: 130px;
+	margin: 2%;
+}
+
+/* Contact me submit button */
+.mybtn2{
+	margin-top: 2%;
+	text-align: center;
+}
+
+/* Footer contact me (contact info) */
+.footer .card2{
+	float: left;
+	width: 42%;
+	border-left: 1px solid #ddd;
+}
+
+.footer .card2 h4{
+	text-align: left;
+	font-size: 34px;
+	margin-top: 15%;
+	margin-left: 20%;
+	margin-bottom: 0%;
+	font-style: italic; 
+	color: aliceblue;
+	display: inline-block;
+}
+
+.footer .card2 .container9{
+	position: left;
+	margin-left: 18%;
+	margin-top: 6%;
+	margin-bottom: 6%;
+	width: 57%;
+	height: 200px;
+	background-color: white;
+	text-align: left;
+	font-style: italic; 
+	line-height: 180%;
+	padding: 5% 2% 4% 2%;
+	color: black;
+}
+
+/* Layout adjustment for narrow screen (change flex direction to column) */
+@media(max-width: 980px){
+	.footer .flex-container2{
+		flex-direction: column;
+		height: 1000px;
+	}
+	.footer .card1{
+		width: 100%;
+		height: 65%;
+		border-bottom: 1px solid #ddd;
+		padding-bottom: 3%;
+	}
+	.footer .card1 .container8{
+		margin-top: 6%;
+		margin-left: 15%;
+		height: 100%;
+	}
+	.footer .card1 .container8 input{ 
+		float: left;
+		width: 96%;
+		margin: 2%;
+	}
+	.footer .card1 .container8 .inputf2 input{
+		width: 96%;
+		margin: 2%;
+	}
+	.footer .card1 .container8 textarea{
+		width: 96%;
+		margin: 2%;
+	}
+	.footer .card2{
+		display: block;
+		height: 35%;
+		width: 100%;
+		border: none;
+	}
+	.footer .card2 h4{
+		margin-top: 5%;
+		margin-left: 30%;
+	}
+	.footer .card2 .container9{
+		margin-left: 15%;
+		width: 70%;
+		height: 160px;
+		line-height: 130%;
+		padding: 5% 2% 1% 2%;
+		color: black;
+	}
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">                     <!--The language of this page-->
+    <head>
+        <meta charset="UTF-8"> <!--HTML5 spec encourages developers to use this-->
+        <script src="constant.js"></script> <!--Link to javascript-->
+        <script>printHTMLhead();</script>
+        <title>Canace's website</title>  <!--Title that appears on the browser tab/window bar-->
+        <meta name="description" content="A personal website for the creative computing student Canace Chen.">
+    </head>
+
+    <body>
+        <!--Top navigation bar: link to home, about and work page and contact section-->
+        <div class="topnav" id="topnav">
+            <script>printHTMLtopnav();</script>
+        </div>
+        
+        <!--Fixed box of platform links-->
+        <div class="fixed" id="plinks">
+            <script>printHTMLplinks();</script>
+        </div>
+
+        <!--Heading of the page-->
+        <div class = "header">
+            <br>
+            <br>
+            <br>
+            C a n N i c e <br>
+            C a n N i c e <br>
+            C a n N i c e <br>
+        </div>
+
+        <main>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+            <!--About me section-->
+            <div class="flex-container"> <!--Create a flex container to align the 2 containers (photo and intro) in the same row. Ref: https://www.youtube.com/watch?v=3YW65K6LcIA-->
+                <!--Photo container-->
+                <div class="flexcontainer1"> 
+                    <img src = "me.jpg" alt = "Canace Chen" width = "60%">  <!--Photo of myself-->
+                </div>
+
+                <!--Brief intro container-->
+                <div class="flexcontainer2">
+                    <!--animated title-->
+                    <!--Ref: https://tobiasahlin.com/moving-letters/#1-->
+                    <h4 class="ml1">
+                        <span class="text-wrapper">
+                            <span class="line line1"></span>
+                            <span class="letters">About Me</span>
+                            <span class="line line2"></span>
+                        </span>
+                    </h4>
+                    
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+                    <!--Ref: https://lordicon.com/icons/wired/lineal/21-avatar-->
+                    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                    <lord-icon
+                        src="https://cdn.lordicon.com/dqxvvqzi.json"
+                        trigger="loop"
+                        colors="outline:#121331,primary:#faddd1,secondary:#66a1ee"
+                        style="width:80px;height:80px;display:inline-block;padding-top:30px;">
+                    </lord-icon>
+
+                    <p>My name is Canace (Yiran, 逸然) Chen, I am an undergraduate student at the Creative Computing Institute, University of the Arts London. I made all the projects on this website, including the website itself. </p>
+                    <p>I was born in China in 2002 and discovered my passion for art there by accident when I was 5. I started with traditional art mediums until I moved to Australia for high school, where I started to explore and experiment with different areas of art and design. Besides art, I also spent a lot of time on maths and participated in many competitions. I struggled to find the balance, but through the research and experiments at school, I found the intersection of my two interests. So, I decided to move to London to develop my skills and crave my own path.</p>
+                    <!--Links to About page-->
+                    <div class="btn mybtn">
+                        <button onClick="window.location.href = 'about.html';" >Learn more</button>
+                    </div>              
+                </div>
+            </div>
+            
+            <!--Gallery section-->
+            <div class="container1">
+                <!--animated title-->
+                <!--Ref: https://tobiasahlin.com/moving-letters/#1-->
+                <h4 class="ml1">
+                    <span class="text-wrapper">
+                        <span class="line line1"></span>
+                        <span class="letters">Gallery</span>
+                        <span class="line line2"></span>
+                    </span>
+                </h4>
+                <script src="text.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+                <!--Ref: https://lordicon.com/icons/wired/lineal/54-photo-picturelandscape-gallery-->
+                <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                <lord-icon
+                    src="https://cdn.lordicon.com/qfbuijil.json"
+                    trigger="loop"
+                    colors="outline:#ffffff,primary:#eeca66,secondary:#1663c7,tertiary:#d1f3fa"
+                    style="width:80px;height:80px;display:inline-block;padding-top:30px;">
+                </lord-icon>
+                
+                <!--Each image links to its individual project page-->
+                <div class="floatcontainer">
+                    <div class="float">
+                        <a href="beforethesunrises.html"><img src = "work/work07.png" alt = "work8"></a>
+                    </div>
+                    <div class="float">
+                        <a href="conescious.html"><img src = "work/work05.png" alt = "work6"></a>
+                    </div>
+                    <div class="float">
+                        <a href="fallingleaves.html"><img src = "work/work06.png" alt = "work7"></a>
+                    </div>
+                    <div class="float">
+                        <a href="jewellery.html"><img src = "work/20210729b.jpg" alt = "work4"></a>
+                    </div>
+                    <div class="float">
+                        <a href="ponggame.html"><img src = "work/20211208.png" alt = "work5"></a>
+                    </div>
+                    <div class="float">
+                        <a href="thepastdaysiimplore.html"><img src = "work/work01.png" alt = "work2"></a>
+                    </div>
+                    <div class="float">
+                        <a href="lilyjames.html"><img src = "work/work00.png" alt = "work1"></a>
+                    </div>
+                    <div class="float">
+                        <a href="whackoblock.html"><img src = "work/work02.png" alt = "work3"></a>
+                    </div>
+                </div>
+                <hr>
+                <!--Links to Work page-->
+                <button onClick="window.location.href = 'work.html';" id="myBtn">Learn more</button>
+            </div>
+
+        </main>
+
+        <!--Footer note-->
+        <div class="footer" id="myfooter">
+            <!--Contact section-->
+            <div class="flex-container2"> <!--Create a flex container to align the 2 containers (inquiries & feedback and contact info) in the same row-->
+                <!--Inquiries and Feedback-->
+                <div class="card1">
+                    <h4>Inquiries & Feedback</h4>
+                    <!--Ref: https://lordicon.com/icons/wired/lineal/981-consultation-->
+                    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                    <lord-icon
+                        src="https://cdn.lordicon.com/kjkiqtxg.json"
+                        trigger="loop"
+                        colors="outline:#121331,primary:#848484,secondary:#c69cf4,tertiary:#faefd1"
+                        style="width:80px;height:80px;display:inline-block;padding-top:30px;margin-right:20%">
+                    </lord-icon>
+                    <!--receive form data with email-->
+                    <!--Ref: https://www.youtube.com/watch?v=rt7AWExUk0Y-->
+                    <form action="https://formspree.io/f/xgebllvq" method="POST" id="form">
+                        <div class="container8">
+                            <!--Input fields (subject and guest contact)-->
+                            <input type="text" name="subject" placeholder="Subject" required>
+                            <div class="inputf2">
+                                <input type="text" name="your_contact" placeholder="Your contact" required><br>
+                            </div>
+                            <!--Textarea (type content)-->
+                            <textarea name="YourInquiries&Feedback" placeholder="Your inquiries & feedback"></textarea><br>
+                            <!--Submission button-->
+                            <div class="btn mybtn2">
+                                <button type="submit" name="submit">Submit</button>
+                            </div>
+                        </div>
+                    </form> 
+                </div>
+                <!--Contact info-->
+                <div class="card2">
+                    <h4>Contact Me</h4>
+                    <!--Ref: https://lordicon.com/icons/wired/lineal/177-envelope-mail-send-->
+                    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                    <lord-icon
+                        src="https://cdn.lordicon.com/gzmgulpl.json"
+                        trigger="loop"
+                        colors="outline:#e4e4e4,primary:#d4f49c,secondary:#107c91"
+                        style="width:80px;height:80px;display:inline-block;padding-top:30px;">
+                    </lord-icon>
+                    <div class="container9">
+                        <p>
+                            Email: c.chen0320213@arts.ac.uk<br>
+                            Instagram: canacechen9549<br>
+                            Discord: Canace #7547<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <br>
+            <!--Footer: copyright-->
+            <footer><strong>Copyright &copy;2024 Canace Chen</strong></footer>
+        </div>
+
+    </body>
+</html>
