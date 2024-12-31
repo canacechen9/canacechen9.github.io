@@ -24,7 +24,11 @@ function printHTMLtopnav(){
                 <li><a href="Resume.pdf">Résumé</a></li> <!--Most of the times it is the easiest to just have a pdf of the resume-->
             </ul>
         </li>
-        <li><a href="work.html">Work</a></li>
+        <li><a href="work.html">Work</a>
+            <ul>
+                <li><a href="Resume.pdf">Portfolio</a></li> 
+            </ul>
+        </li>
         <li id="contactl"><a href="#myfooter">Contact</a></li> <!--link to conntact section using tag-->
     </ul>
 </nav>
