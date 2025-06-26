@@ -25,9 +25,6 @@ function printHTMLtopnav(){
             </ul>
         </li>
         <li><a href="work.html">Work</a>
-            <ul>
-                <li><a href="portfolio.pdf">Portfolio</a></li> 
-            </ul>
         </li>
         <li id="contactl"><a href="#myfooter">Contact</a></li> <!--link to conntact section using tag-->
     </ul>
