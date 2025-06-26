@@ -57,7 +57,7 @@ function printHTMLplinks(){
 function printHTMLsfooter(){
     let text = `
 <hr>
-<footer><strong>Copyright &copy;2024 Canace Chen</strong></footer>
+<footer><strong>Copyright &copy;2025 Canace Chen</strong></footer>
     `;
     document.getElementById('simplefooter').innerHTML = text;
 }
