@@ -53,12 +53,74 @@ function printHTMLplinks(){
     document.getElementById('plinks').innerHTML = text;
 }
 
-// Create a function to generate simple footer content for html
+// Create a function to generate footer contents for html
+function printHTMLsfooter1(){
+    let text = `
+<!--Contact section-->
+<div class="flex-container2"> <!--Create a flex container to align the 2 containers (inquiries & feedback and contact info) in the same row-->
+    <!--Inquiries and Feedback-->
+    <div class="card1">
+        <h4>Inquiries & Feedback</h4>
+        <!--Ref: https://lordicon.com/icons/wired/lineal/981-consultation-->
+        <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+        <lord-icon
+            src="https://cdn.lordicon.com/kjkiqtxg.json"
+            trigger="loop"
+            colors="outline:#121331,primary:#848484,secondary:#c69cf4,tertiary:#faefd1"
+            style="width:80px;height:80px;display:inline-block;padding-top:30px;margin-right:20%">
+        </lord-icon>
+        <!--receive form data with email-->
+        <!--Ref: https://www.youtube.com/watch?v=rt7AWExUk0Y-->
+        <form action="https://formspree.io/f/xgebllvq" method="POST" id="form">
+            <div class="container8">
+                <!--Input fields (subject and guest contact)-->
+                <input type="text" name="subject" placeholder="Subject" required>
+                <div class="inputf2">
+                    <input type="text" name="your_contact" placeholder="Your contact" required><br>
+                </div>
+                <!--Textarea (type content)-->
+                <textarea name="YourInquiries&Feedback" placeholder="Your inquiries & feedback"></textarea><br>
+                <!--Submission button-->
+                <div class="btn mybtn2">
+                    <button type="submit" name="submit">Submit</button>
+                </div>
+            </div>
+        </form> 
+    </div>
+    <!--Contact info-->
+    <div class="card2">
+        <h4>Contact Me</h4>
+        <!--Ref: https://lordicon.com/icons/wired/lineal/177-envelope-mail-send-->
+        <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+        <lord-icon
+            src="https://cdn.lordicon.com/gzmgulpl.json"
+            trigger="loop"
+            colors="outline:#e4e4e4,primary:#d4f49c,secondary:#107c91"
+            style="width:80px;height:80px;display:inline-block;padding-top:30px;">
+        </lord-icon>
+        <div class="container9">
+            <p>
+                Email: canaceec@icloud.com<br>
+                Instagram: canacechen9549<br>
+                Discord: Canace #7547<br>
+            </p>
+        </div>
+    </div>
+</div>
+<hr>
+<br>
+<!--Footer: copyright-->
+<footer><strong>Copyright &copy;2025 Canace Chen</strong></footer>
+    `;
+    document.getElementById('myfooter').innerHTML = text;
+}
+
 function printHTMLsfooter(){
     let text = `
-<hr>
+<!--Footer: copyright-->
 <footer><strong>Copyright &copy;2025 Canace Chen</strong></footer>
     `;
     document.getElementById('simplefooter').innerHTML = text;
 }
+
 
