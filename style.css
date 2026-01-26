@@ -352,50 +352,61 @@ body.light-ui {
 @media (max-width: 980px) {
 	/* Category page title */
 	.category-title h1{
-		padding: 25vw 5%;
+		padding: 25vw 5% 3vw 5%;
 	}
+
+  .grid-view .category-title h1{
+    padding: 15vw 20% 13vw 20%;
+  }
 
 	.projects{
 		padding: 0px 5% 80px 5%;
 	}
-    /* Change Grid to 1 project per row */
-    .grid-view .project-list {
-        grid-template-columns: 1fr; 
-        gap: 300px;
-		align-items: center;
-		display: flex;
-        flex-direction: column;
-        align-items: center; /* Centers the 60% wide items */
-        padding: 200px 0 400px 0;
-    }
+
+  /* Change Grid to 1 project per row */
+  .grid-view .project-list {
+    grid-template-columns: 1fr; 
+    gap: 250px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the 60% wide items */
+    padding: 0px 0 460px 0;
+  }
 
 	.grid-view .grid-image-container {
-        width: 60vw;        /* Exactly 60% of screen width */
-        aspect-ratio: auto; /* Remove the square constraint */
-        height: auto;       /* Let the height grow naturally */
-        display: block;     /* Regular block flow for text to sit under */
-    }
+    width: 60vw;        /* Exactly 60% of screen width */
+    aspect-ratio: auto; /* Remove the square constraint */
+    height: auto;       /* Let the height grow naturally */
+    display: block;     /* Regular block flow for text to sit under */
+  }
 
 	.grid-view .grid-image {
-        width: 100%;        /* Fills the 60vw container */
-        height: auto;       /* Maintains original ratio */
-        display: block;
-    }
+    width: 100%;        /* Fills the 60vw container */
+    height: auto;       /* Maintains original ratio */
+    display: block;
+  }
 
 	.grid-view .project-text {
-        width: 60vw;        /* Matches image width for perfect alignment */
-        text-align: left;
-    }
+    width: 60vw;        /* Matches image width for perfect alignment */
+    text-align: left;
+  }
+
+  .grid-view .project-list:hover .project-item:not(:hover) {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  } 
+
 	.banner-container{
-		margin-bottom: 30vh;
+		margin-bottom: 20vh;
 	}
 
 	.index-view .project-list{
-		padding: 0vh 0px 50vh 0px;
+		padding: 10vh 0px 52vh 0px;
 	}
 
 	.index-view .project-text{
-		padding: 5px;
+		padding: 20px 5px;
 	}
 
 	/* Default state for project text on mobile */
