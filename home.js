@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Auto-hover for mobile view (responsive)
     const observerOptions = {
         root: null, // use the viewport
-        rootMargin: '-30% 0% 55% 0%', // triggers range
+        rootMargin: '-30% 0% -55% 0%', // triggers range
         threshold: 0.1
     };
 

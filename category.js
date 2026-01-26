@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 wrapper.classList.remove('index-view');
                 wrapper.classList.add('grid-view');
                 viewToggle.innerText = 'Index';
+                previewImage.classList.remove('visible');
             }
         });
     } else {
@@ -25,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Auto-hover for mobile view (responsive)
     const observerOptions = {
         root: null, // use the viewport
-        rootMargin: '-25% 0% -55% 0%', // triggers range
+        rootMargin: '-25% 0% -60% 0%', // triggers range
         threshold: 0.1
     };
 
