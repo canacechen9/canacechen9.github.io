@@ -192,7 +192,7 @@ body.light-ui {
 .category-title h1{
 	font-size: 32;
 	font-weight: 200;
-	padding-left: 150px;
+	padding-left: 10%;
 	padding-top: 12px;
 	padding-bottom: 50px;
 }
@@ -260,8 +260,8 @@ body.light-ui {
   position: fixed;
   right: 10%; /* Adjust this to move the "center point" left or right */
   top: 29%;
-  width: 450px; /* Fixed area for alignment */
-  height: 450px;
+  width: 28.5%; /* Fixed area for alignment */
+  aspect-ratio: 1;
   pointer-events: none; /* User can't click the image */
   display: flex;
   align-items: center;
@@ -348,6 +348,10 @@ body.light-ui {
     box-sizing: border-box;
 }
 
+.index-view .project-item{
+    padding-right: 40%;
+}
+
 /* Responsive design for project list */
 @media (max-width: 980px) {
 	/* Category page title */
@@ -412,8 +416,8 @@ body.light-ui {
 	/* Default state for project text on mobile */
     .index-view .project-item .name,
     .index-view .project-item .desc {
-        font-size: 1.5rem; 
-		opacity: 0.6;
+      font-size: 1.5rem; 
+		  opacity: 0.6;
     }
 
 	/* Active state triggered by the Intersection Observer */
@@ -422,6 +426,16 @@ body.light-ui {
         font-size: 1.875rem;
         opacity: 1; /* Ensures it's fully bright when 'hovered' */
     }
+
+    /* Remove dash shift*/
+  .project-item:hover {
+    padding-left: 0px;
+  }
+
+  .project-item:hover::before {
+    opacity: 0;
+    transform: translateX(0);
+  }
 
     /* Move Preview Image to Bottom Middle */
     #project-preview-container {
