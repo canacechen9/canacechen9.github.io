@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">                     <!--The language of this page-->
+    <head>
+        <meta charset="UTF-8"> <!--HTML5 spec encourages developers to use this-->
+        <script src="constant.js"></script> <!--Link to javascript-->
+        <script src="category.js" defer></script>
+        <script>printHTMLhead();</script>
+        <title>Data Visualisation</title>  <!--Title that appears on the browser tab/window bar-->
+        <meta name="description" content="Category: Data Visualisation">
+    </head>
+
+    <body>
+        <!--Top navigation bar: link to home, info pages, and switch between grid and index views-->
+        <div class="topnav" id="topnav">
+            <script>printHTMLcatenav();</script>
+        </div>
+
+        <!--Category Title-->
+        <div class="category-title">
+            <h1>Data Visualisation</h1>
+        </div>
+
+        <main>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+            
+            <div id="content-wrapper" class="index-view"> <div class="projects">
+            <ul class="project-list">
+                <li>
+                    <a href="reeflection.html" class="project-item" data-color="#15221e" data-image="work/20250621cover.jpeg">
+                    <div class="grid-image-container">
+                        <img src="work/20250621cover.jpeg" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">Reeflection</span>
+                        <span class="desc">Interactive Installation on Marine Ecosystem</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="vitalityunveiled.html" class="project-item" data-color="#f3cdcf" data-image="work/20230620.png" data-theme="light">
+                    <div class="grid-image-container">
+                        <img src="work/20230620.png" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">Vitality Unveiled</span>
+                        <span class="desc">Data visualisation on gender inequality</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="data-animalremnant.html" class="project-item" data-color="#505b31" data-image="work/20230616.jpg">
+                    <div class="grid-image-container">
+                        <img src="work/20230616.jpg" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">Data-Animal Remnant</span>
+                        <span class="desc">Embroidery driven by Big data</span>
+                    </div>
+                    </a>
+                </li>
+
+            </ul>
+            </div></div>
+
+            <div id="project-preview-container">
+                <img id="project-preview-image" src="" alt="">
+            </div>
+
+            <div class="myfooter" id="myfooter">
+                <script>printHTMLmyfooter();</script>
+            </div>
+
+        </main>
+
+    </body>
+</html>

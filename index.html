@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">                     <!--The language of this page-->
+    <head>
+        <meta charset="UTF-8"> <!--HTML5 spec encourages developers to use this-->
+        <script src="constant.js"></script> <!--Link to javascript-->
+        <script src="home.js" defer></script>
+        <script>printHTMLhead();</script>
+        <title>Canace Chen</title>  <!--Title that appears on the browser tab/window bar-->
+        <meta name="description" content="A portfolio website for Canace Chen (Creative Technologist).">
+    </head>
+
+    <body>
+        <!--Top navigation bar: link to home, info pages, and switch between grid and index views-->
+        <div class="topnav" id="topnav">
+            <script>printHTMLtopnav();</script>
+        </div>
+
+        <!--Project Categories-->
+        <div class="banner-container">
+            <div class="banner-track" id="track">
+                <div class="track-content" id="original-content">
+                    <span class="category"><a href="interactiondesign.html">Interaction Design.</a></span>
+                    <span class="category"><a href="arvr.html">AR/VR.</a></span>
+                    <span class="category"><a href="games.html">Games.</a></span>
+                    <span class="category"><a href="aiml.html">AI/ML.</a></span>
+                    <span class="category"><a href="3dmotiondesign.html">3D/Motion Design.</a></span>
+                    <span class="category"><a href="wearabletechnology.html">Wearable Technology.</a></span>
+                    <span class="category"><a href="datavisualisation.html">Data Visualisation.</a></span>
+                    <span class="category"><a href="graphicdesign.html">Graphic Design.</a></span>
+                    <span class="category"><a href="art.html">Art.</a></span>
+                    <span class="category"><a href="mathematics.html">Mathematics.</a></span>
+                </div>
+                </div>
+        </div>
+
+        <main>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+            <div id="content-wrapper" class="index-view"> <div class="projects">
+            <ul class="project-list">
+                <li>
+                    <a href="reeflection.html" class="project-item" data-color="#15221e" data-image="work/20250621cover.jpeg">
+                    <div class="grid-image-container">
+                        <img src="work/20250621cover.jpeg" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">Reeflection</span>
+                        <span class="desc">Interactive Installation on Marine Ecosystem</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="posturafit.html" class="project-item" data-color="#b4a88b" data-image="work/20241228cover.png" data-theme="light">
+                    <div class="grid-image-container">
+                        <img src="work/20241228cover.png" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">PosturaFit</span>
+                        <span class="desc">Wearable Posture Correction Device</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="metachronicle.html" class="project-item" data-color="#2a1e1c" data-image="work/20241210cover.png">
+                    <div class="grid-image-container">
+                        <img src="work/20241210cover.png" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">MetaChronicle</span>
+                        <span class="desc">GenAI History Explorer</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="gpjactivationsgallery.html" class="project-item" data-color="#251e19" data-image="work/20240904cover.jpeg">
+                    <div class="grid-image-container">
+                        <img src="work/20240904cover.jpeg" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">GPJ Activation Gallery</span>
+                        <span class="desc">Interactive & Immersive Virtual Gallery</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="fromfarmtofork.html" class="project-item" data-color="#140c34" data-image="work/202409.gif">
+                    <div class="grid-image-container">
+                        <img src="work/202409.gif" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">From Farm to Fork</span>
+                        <span class="desc">DP World at Fruit Logistica</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="carsincontainers.html" class="project-item" data-color="#f27f58" data-image="work/202408.gif" data-theme="light">
+                    <div class="grid-image-container">
+                        <img src="work/202408.gif" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">Cars in Containers</span>
+                        <span class="desc">Automotive logistics explained on screen</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="makeasplash.html" class="project-item" data-color="#0a194c" data-image="work/202405acover.jpeg">
+                    <div class="grid-image-container">
+                        <img src="work/202405acover.jpeg" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">Make a Splash</span>
+                        <span class="desc">Immersive projections at Click24</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="sportactivations.html" class="project-item" data-color="#0a194c" data-image="work/202405bcover.jpeg">
+                    <div class="grid-image-container">
+                        <img src="work/202405bcover.jpeg" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">Sport Activations</span>
+                        <span class="desc">Interactive sport games at Click24</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="powerfulplants.html" class="project-item" data-color="#74559b" data-image="work/20240421acover.jpeg" >
+                    <div class="grid-image-container">
+                        <img src="work/20240421acover.jpeg" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">Powerful Plant</span>
+                        <span class="desc">Multisensory installation for Starbucks</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="regionalroutes.html" class="project-item" data-color="#74559b" data-image="work/20240421bcover.jpeg" >
+                    <div class="grid-image-container">
+                        <img src="work/20240421bcover.jpeg" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">Regional Route</span>
+                        <span class="desc">Tabletop interactive installation for Starbucks</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="ciscolivecircuitchallenge.html" class="project-item" data-color="#0b419c" data-image="work/202402acover.jpeg" >
+                    <div class="grid-image-container">
+                        <img src="work/202402acover.jpeg" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">Cisco Live Circuit Challenge</span>
+                        <span class="desc">AR game for Cisco × McLaren</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="cisconetworkingcloudpuzzle.html" class="project-item" data-color="#0b419c" data-image="work/202402bcover.png" >
+                    <div class="grid-image-container">
+                        <img src="work/202402bcover.png" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">Cisco Networking Cloud Puzzle</span>
+                        <span class="desc">Explain multi-cloud through game</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="globalcafe.html" class="project-item" data-color="#ffffff" data-image="work/202312acover.jpeg" data-theme="light">
+                    <div class="grid-image-container">
+                        <img src="work/202312acover.jpeg" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">Global Café</span>
+                        <span class="desc">Gamified café ordering experience</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="coralvita.html" class="project-item" data-color="#ffffff" data-image="work/202312bcover.jpeg" data-theme="light">
+                    <div class="grid-image-container">
+                        <img src="work/202312bcover.jpeg" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">Coral Vita</span>
+                        <span class="desc">Interactive coral restoration sim</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="safevibe.html" class="project-item" data-color="#fdfdfd" data-image="work/20230804.gif" data-theme="light">
+                    <div class="grid-image-container">
+                        <img src="work/20230804.gif" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">Safe Vibe</span>
+                        <span class="desc">Safety wristband for events and festivals</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="vitalityunveiled.html" class="project-item" data-color="#f3cdcf" data-image="work/20230620.png" data-theme="light">
+                    <div class="grid-image-container">
+                        <img src="work/20230620.png" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">Vitality Unveiled</span>
+                        <span class="desc">Data visualisation on gender inequality</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="data-animalremnant.html" class="project-item" data-color="#505b31" data-image="work/20230616.jpg">
+                    <div class="grid-image-container">
+                        <img src="work/20230616.jpg" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">Data-Animal Remnant</span>
+                        <span class="desc">Embroidery driven by Big data</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="rover.html" class="project-item" data-color="#0a1127" data-image="work/20230615cover.png">
+                    <div class="grid-image-container">
+                        <img src="work/20230615cover.png" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">Rover</span>
+                        <span class="desc">Trip planning iOS APP</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="animalbiscuit.html" class="project-item" data-color="#212146" data-image="work/20221214.gif">
+                    <div class="grid-image-container">
+                        <img src="work/20221214.gif" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">Animal Biscuit</span>
+                        <span class="desc">AR animation over photo</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="fallingleaves.html" class="project-item" data-color="#000000" data-image="work/20220622.gif">
+                    <div class="grid-image-container">
+                        <img src="work/20220622.gif" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">Falling Leaves</span>
+                        <span class="desc">Processing animation</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="conescious.html" class="project-item" data-color="#000000" data-image="work/20220325.gif">
+                    <div class="grid-image-container">
+                        <img src="work/20220325.gif" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">Cone-scious</span>
+                        <span class="desc">Raise awareness for colourblindness</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="interactiveposterdesign.html" class="project-item" data-color="#6a180d" data-image="work/20220127.gif">
+                    <div class="grid-image-container">
+                        <img src="work/20220127.gif" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">Interactive Poster</span>
+                        <span class="desc">Interactive Poster Design</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="ponggame.html" class="project-item" data-color="#9090aa" data-image="work/20211208.gif" data-theme="light">
+                    <div class="grid-image-container">
+                        <img src="work/20211208.gif" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">Pong Game</span>
+                        <span class="desc">Inspired by an album cover</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="paradox.html" class="project-item" data-color="#ffeecb" data-image="work/20211020.JPG" data-theme="light">
+                    <div class="grid-image-container">
+                        <img src="work/20211020.JPG" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">Paradox</span>
+                        <span class="desc">Paradoxical self-portrait</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="jewellery.html" class="project-item" data-color="#ffffff" data-image="work/20210729a.jpg" data-theme="light">
+                    <div class="grid-image-container">
+                        <img src="work/20210729a.jpg" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">Jewellery</span>
+                        <span class="desc">Matrix9 + Rhino 3D modelling</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="whackoblock.html" class="project-item" data-color="#565a36" data-image="work/20210205.gif">
+                    <div class="grid-image-container">
+                        <img src="work/20210205.gif" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">Whack-a-block</span>
+                        <span class="desc">Arduino installtion on mental stress</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="psprac.html" class="project-item" data-color="#00283a" data-image="work/20200223.PNG">
+                    <div class="grid-image-container">
+                        <img src="work/20200223.PNG" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">PS Prac</span>
+                        <span class="desc">Photoshop Practice</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="generativemusic.html" class="project-item" data-color="#ffffff" data-image="work/20200227.png" data-theme="light">
+                    <div class="grid-image-container">
+                        <img src="work/20200227.png" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">Generative Music</span>
+                        <span class="desc">Generate music with Markov Chain</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="rollercoaster.html" class="project-item" data-color="#ffffff" data-image="work/20200220.png" data-theme="light">
+                    <div class="grid-image-container">
+                        <img src="work/20200220.png" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">Roller Coaster</span>
+                        <span class="desc">Designed with Function Graphs</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="blossom.html" class="project-item" data-color="#D4D6CD" data-image="work/20191125.jpg" data-theme="light">
+                    <div class="grid-image-container">
+                        <img src="work/20191125.jpg" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">Blossom</span>
+                        <span class="desc">Patterns from fruits and vegetables</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="thepastdaysiimplore.html" class="project-item" data-color="#a2aca4" data-image="work/20191008.jpg" data-theme="light">
+                    <div class="grid-image-container">
+                        <img src="work/20191008.jpg" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">The Past Days I Implore</span>
+                        <span class="desc">Poem adaptation</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="beautymarionette.html" class="project-item" data-color="#a1b436" data-image="work/20190906.jpg" data-theme="light">
+                    <div class="grid-image-container">
+                        <img src="work/20190906.jpg" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">Beauty Marionette</span>
+                        <span class="desc">What influences the beauty standard?</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="levi.html" class="project-item" data-color="#004fac" data-image="work/20190304.png">
+                    <div class="grid-image-container">
+                        <img src="work/20190304.png" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">Levi</span>
+                        <span class="desc">House logo</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="fashionillustration.html" class="project-item" data-color="#9bb9f8" data-image="work/20190106.JPG" data-theme="light">
+                    <div class="grid-image-container">
+                        <img src="work/20190106.JPG" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">Fashion Illustration</span>
+                        <span class="desc">Fashion illustration practice</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="yearning.html" class="project-item" data-color="#1a1a1a" data-image="work/20190104.JPG">
+                    <div class="grid-image-container">
+                        <img src="work/20190104.JPG" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">Yearning</span>
+                        <span class="desc">Skeleton photography</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="tshirtdesign.html" class="project-item" data-color="#ffd268" data-image="work/20180816.png" data-theme="light">
+                    <div class="grid-image-container">
+                        <img src="work/20180816.png" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">T-shirt Design</span>
+                        <span class="desc">T-shirt Graphic</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="thedrowningpaperball.html" class="project-item" data-color="#d2d2d2" data-image="work/20180813.jpg" data-theme="light">
+                    <div class="grid-image-container">
+                        <img src="work/20180813.jpg" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">A Drowning paper Ball</span>
+                        <span class="desc">Reflection on society</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="lilyjames.html" class="project-item" data-color="#ffffff" data-image="work/20180716.png" data-theme="light">
+                    <div class="grid-image-container">
+                        <img src="work/20180716.png" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">Lily James</span>
+                        <span class="desc">Digital portrait</span>
+                    </div>
+                    </a>
+                </li>
+                </ul>
+            </div></div>
+
+            <div id="project-preview-container">
+                <img id="project-preview-image" src="" alt="">
+            </div>
+
+            <div class="myfooter" id="myfooter">
+                <script>printHTMLmyfooter();</script>
+            </div>
+
+        </main>
+
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">                     <!--The language of this page-->
+    <head>
+        <meta charset="UTF-8"> <!--HTML5 spec encourages developers to use this-->
+        <script src="constant.js"></script> <!--Link to javascript-->
+        <script src="project.js" defer></script> 
+        <script>printHTMLhead();</script>
+        <title>From Farm to Fork</title>  <!--Title that appears on the browser tab/window bar-->
+        <meta name="description" content="Canace Chen's Website: From Farm to Fork">
+    </head>
+
+    <body style="--project-color: #140c34; --text-color: #fff; --text-color-greyed: #999;" >
+        <!--top navigation bar: link to home and previous page-->
+        <div class="projectnav" id="projectnav">
+            <script>printHTMLprojectnav();</script>
+        </div>
+
+        <div class="project-wrapper" id="project-config" 
+     data-slides='[
+            { "type": "image", "url": "work/202409.png" },
+            { "type": "video", "url": "work/202409.mp4" },
+            { "type": "image", "url": "work/202409_2.png" }
+            ]'>
+            <!--Gallery slide-->
+            <div class="slide-viewport" id="slideArea">
+                <div class="media-frame">
+                </div>
+                
+                <div id="custom-cursor">NEXT</div>
+            </div>
+            <!--Project key info-->
+            <div class="project-info-bar">
+                <div class="info-item info-left">From Farm to Fork (GPJ)</div>
+                <div class="info-item info-center">2024</div>
+                <div class="info-item info-right">Fruit Logistica 2024 Berlin & Hong Kong </div>
+            </div>
+            <!--Project details-->
+            <section class="project-details">
+                <!--Project summary tags-->
+                <h2>#Interactive Screen #Interactive Storytelling #Experiential Marketing #Brand Story #Brand #Identity #UI/UX Design #Intuiface</h2>
+                <!--Project details body-->
+                <p>This project was build for DP World at Fruit Logistica. It is an interactive screen unveiling DP World’s end-to-end solutions for the perishables supply chain.</p>
+                <p>Attendees "slide" a screen over animated visual. The sliding screen features multiple decimal points, triggering relevant content as it reaches each point. ​This mechanism provides an “x-ray” effect, illustrating DP World’s end-to-end solutions. Showcasing DP World’s expertise, extending beyond traditional port operations to cover the entire supply chain. ​</p>
+                <p>​The experience allows attendees to explore the comprehensive services DP World offers, experiencing firsthand the company’s role in ensuring the seamless journey of perishable goods from source to destination.​</p>
+            </section>
+        </div>
+    
+    </body>
+
+</html>

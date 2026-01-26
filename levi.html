@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">                     <!--The language of this page-->
+    <head>
+        <meta charset="UTF-8"> <!--HTML5 spec encourages developers to use this-->
+        <script src="constant.js"></script> <!--Link to javascript-->
+        <script src="project.js" defer></script>
+        <script>printHTMLhead();</script>
+        <title>Levi</title>  <!--Title that appears on the browser tab/window bar-->
+        <meta name="description" content="Canace Chen's Website: Levi">
+    </head>
+
+    <body style="--project-color: #004fac; --text-color: #fff; --text-color-greyed: #999;" >
+        <!--top navigation bar: link to home and previous page-->
+        <div class="projectnav" id="projectnav">
+            <script>printHTMLprojectnav();</script>
+        </div>
+
+        <div class="project-wrapper" id="project-config" 
+     data-slides='[
+            { "type": "image", "url": "work/20190304.png" }
+            ]'>
+            <!--Gallery slide-->
+            <div class="slide-viewport" id="slideArea">
+                <div class="media-frame">
+                </div>
+                
+                <div id="custom-cursor">NEXT</div>
+            </div>
+            <!--Project key info-->
+            <div class="project-info-bar">
+                <div class="info-item info-left">Levi</div>
+                <div class="info-item info-center">Mar 04 2019</div>
+                <div class="info-item info-right">Citipointe Christian College</div>
+            </div>
+            <!--Project details-->
+            <section class="project-details">
+                <!--Project summary tags-->
+                <h2>#Logo Design #Graphic Design #Photoshop #Adobe Illustrator</h2>
+                <!--Project details body-->
+                <p>A logo design for school house.</p>
+            </section>
+        </div>
+    
+    </body>
+
+</html>

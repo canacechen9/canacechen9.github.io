@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">                     <!--The language of this page-->
+    <head>
+        <meta charset="UTF-8"> <!--HTML5 spec encourages developers to use this-->
+        <script src="constant.js"></script> <!--Link to javascript-->
+        <script src="project.js" defer></script> 
+        <script>printHTMLhead();</script>
+        <title>Rover</title>  <!--Title that appears on the browser tab/window bar-->
+        <meta name="description" content="Canace Chen's Website: Rover">
+    </head>
+
+    <body style="--project-color: #0a1127; --text-color: #fff; --text-color-greyed: #999;" >
+        <!--top navigation bar: link to home and previous page-->
+        <div class="projectnav" id="projectnav">
+            <script>printHTMLprojectnav();</script>
+        </div>
+
+        <div class="project-wrapper" id="project-config" 
+     data-slides='[
+            { "type": "image", "url": "work/20230615.jpg" },
+            { "type": "image", "url": "work/20230615_1.png" },
+            { "type": "image", "url": "work/20230615_2.png" },
+            { "type": "image", "url": "work/20230615_3.PNG" },
+            { "type": "video", "url": "work/20230615.mov" }
+            ]'>
+            <!--Gallery slide-->
+            <div class="slide-viewport" id="slideArea">
+                <div class="media-frame">
+                </div>
+                
+                <div id="custom-cursor">NEXT</div>
+            </div>
+            <!--Project key info-->
+            <div class="project-info-bar">
+                <div class="info-item info-left">Rover</div>
+                <div class="info-item info-center">Jun 15 2023</div>
+                <div class="info-item info-right">UAL Creative Computing Institute</div>
+            </div>
+            <!--Project details-->
+            <section class="project-details">
+                <!--Project summary tags-->
+                <h2>#App Development #UI/UX Design #iOS Development #User Persona #Case Study Analysis #Online Community #Swift #XCode</h2>
+                <!--Project details body-->
+                <p>“Rover” is a trip planning application made for the traveller community. The name, rover, means "a person who spends their time travelling from place to place". The app allows users to plan for their trips as well as explore new destinations (group trips, food & drinks, attractions, events). Users can also share their plans and look at other users' plans to grow the community. As nowadays travellers prefer to gather information through peers’ recommendation, online travel community has become the new trend (Casaló et al., 2011). The purpose of this APP is to provide the traveller community a platform to explore and share. To inspire them by hunting for the hidden gem in every city and celebrating the diversity in cultures.</p>
+                <p>One of the prominent challenges with current travel apps is their limited scope, often catering to only a few of the diverse needs of travellers. As a result, individuals find themselves needing to download and use multiple apps to address different aspects of their journeys. This fragmented approach creates inconvenience, app clutter, and a disjointed user experience. Travelers are left navigating through a maze of apps for accommodations, flights, transportation, sightseeing, and social interaction, among others. </p>
+                <p>The traveller community places great importance on the community aspect of a trip planning app. For these adventurous souls, connecting with like-minded individuals is an integral part of their journey. An ideal app would go beyond being a mere tool and foster a sense of belonging and collaboration among travellers. Therefore, Rover provides a platform to fulfil the need of travellers to share their travel experiences, tips, and recommendations, creating a vibrant community-driven hub (Huang et al., 2017).</p>
+                <p>The theme, logo, assets and initial user interface were designed using Procreate. Figma was used for wireframing and demonstration of the user interaction. The functional App was developed with Swift on Xcode.</p>
+                <br>
+                <!--Project links-->
+                <div class="project-links">
+                    <!--Open in a separate tab-->
+                    <a href="work/20230615.pdf" target="_blank" rel="noopener noreferrer">FULL PORTFOLIO HERE</a><br>
+                    <a href="https://www.figma.com/file/cCRzaRH9ekqE1YrbCr0i2s/Rover?type=design&node-id=0%3A1&t=utVyKNvd1BdkZpE5-1" target="_blank" rel="noopener noreferrer">UI Design</a><br>
+                    <a href="https://github.com/canacechen9/Rover" target="_blank" rel="noopener noreferrer">GITHUB LINK HERE</a>
+                </div>
+            </section>
+        </div>
+    
+    </body>
+
+</html>

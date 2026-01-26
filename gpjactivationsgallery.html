@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">                     <!--The language of this page-->
+    <head>
+        <meta charset="UTF-8"> <!--HTML5 spec encourages developers to use this-->
+        <script src="constant.js"></script> <!--Link to javascript-->
+        <script src="project.js" defer></script>
+        <script>printHTMLhead();</script>
+        <title>GPJ Activations Gallery</title>  <!--Title that appears on the browser tab/window bar-->
+        <meta name="description" content="Canace Chen's Website: GPJ Activations Gallery">
+    </head>
+
+    <body style="--project-color: #251e19; --text-color: #fff; --text-color-greyed: #999;" >
+        <!--top navigation bar: link to home and previous page-->
+        <div class="projectnav" id="projectnav">
+            <script>printHTMLprojectnav();</script>
+        </div>
+
+        <div class="project-wrapper" id="project-config" 
+     data-slides='[
+            { "type": "video", "url": "work/20240904.mp4" },
+            { "type": "image", "url": "work/20240904.jpeg" },
+            { "type": "image", "url": "work/20240904cover.jpeg" }
+            ]'>
+            <!--Gallery slide-->
+            <div class="slide-viewport" id="slideArea">
+                <div class="media-frame">
+                </div>
+                
+                <div id="custom-cursor">NEXT</div>
+            </div>
+            <!--Project key info-->
+            <div class="project-info-bar">
+                <div class="info-item info-left">GPJ Activations Gallery</div>
+                <div class="info-item info-center">Sep 04 2024</div>
+                <div class="info-item info-right">GPJ Lab</div>
+            </div>
+            <!--Project details-->
+            <section class="project-details">
+                <!--Project summary tags-->
+                <h2>#Augmented Reality #Virtual Reality #Human-Computer Interaction #Spatial Computing #Experiential Marketing #Apple Vision Pro #XCode #Swift #VisionOS</h2>
+                <!--Project details body-->
+                <p>This project explores the application of advanced immersive technologies in experiential marketing, combining AR with VR to create a novel app on Apple Vision Pro that showcases a series of interactive brand activations. The app allows users to either engage with highly detailed miniature models or immerse themselves in life-size virtual space.</p>
+                <p>The development process was informed by research into the effectiveness of immersive technologies in marketing and user experience design. Studies indicate that AR and VR can significantly increase user engagement, enhance recall, and create a stronger emotional connection to the brand, compared to traditional marketing mediums. This project applies these findings to deliver a dual-experience platform where users can toggle between AR and VR to gain a comprehensive understanding of marketing activations.</p>
+                <p>The app leverages spatial computing capabilities to offer intuitive navigation and interaction, making complex information both accessible and engaging. This initiative not only showcases the technology but also serves as a unique platform to document the design details behind each activation.</p>
+                <br>
+                <!--Project links-->
+                <div class="project-links">
+                    <!--Open in a separate tab-->
+                    <a href="work/20240904.pdf" target="_blank" rel="noopener noreferrer">FULL PORTFOLIO HERE</a><br>
+                    <a href="https://github.com/canacechen9/GPJ-Activations-Gallery" target="_blank" rel="noopener noreferrer">GITHUB LINK HERE</a>
+                </div>
+            </section>
+        </div>
+    
+    </body>
+
+</html>

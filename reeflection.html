@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">                     <!--The language of this page-->
+    <head>
+        <meta charset="UTF-8"> <!--HTML5 spec encourages developers to use this-->
+        <script src="constant.js"></script> <!--Link to javascript-->
+        <script src="project.js" defer></script> 
+        <script>printHTMLhead();</script>
+        <title>Reeflection</title>  <!--Title that appears on the browser tab/window bar-->
+        <meta name="description" content="Canace Chen's Website: Reeflection">
+    </head>
+
+    <body style="--project-color: #15221e; --text-color: #fff; --text-color-greyed: #999;" >
+        <!--top navigation bar: link to home and previous page-->
+        <div class="projectnav" id="projectnav">
+            <script>printHTMLprojectnav();</script>
+        </div>
+
+        <div class="project-wrapper" id="project-config" 
+     data-slides='[
+            { "type": "image", "url": "work/20250621.jpeg" },
+            { "type": "image", "url": "work/20250621_1.jpeg" },
+            { "type": "image", "url": "work/20250621_2.png" },
+            { "type": "image", "url": "work/20250621_3.png" },
+            { "type": "image", "url": "work/20250621_4.png" },
+            { "type": "image", "url": "work/20250621_5.png" }
+            ]'>
+            <!--Gallery slide-->
+            <div class="slide-viewport" id="slideArea">
+                <div class="media-frame">
+                </div>
+                
+                <div id="custom-cursor">NEXT</div>
+            </div>
+            <!--Project key info-->
+            <div class="project-info-bar">
+                <div class="info-item info-left">Reeflection</div>
+                <div class="info-item info-center">Jun 21 2025</div>
+                <div class="info-item info-right">UAL CCI Summer Festival</div>
+            </div>
+            <!--Project details-->
+            <section class="project-details">
+                <!--Project summary tags-->
+                <h2>#Interactive Installation #Immersive Experience #Environmental Art #Public Art #Data Visualisation #Sensor System  
+#Raspberry Pi #Processing #3D Printing #Blender #Rhino</h2>
+                <!--Project details body-->
+                <p>This project investigates how interactive installation art can serve as a medium to engage audiences with ecological and ethical questions around artificial coral reefs. Combining physical sculpture, digital visualisation, and sensory interaction, the project aims not just to inform but to invite reflection on the broader tensions between technological intervention, environmental preservation, and human responsibility. Drawing from case studies, artistic precedents, and theoretical frameworks, the research critically examines the role of creative practice in making complex environmental topics accessible and emotionally resonant. The project positions installation art as more than representation — as an active space for public dialogue, encouraging audiences to think critically about the limits and potential of human-made solutions in the face of environmental decline.</p>
+                <p>The installation features a synthetic coral reef sculpture, crafted from various materials to mimic both natural and artificial reef structures. Some parts of the reef are thriving and vibrant, symbolising successful restoration efforts, while others appear polluted and lifeless, representing failed interventions and the limits of human-made solutions. Surrounding the reef, periscopes invite the audience to peer into different perspectives—from educational animations explaining the technology, data visualisations showing artificial reefs’ real-world performance. </p>
+                <p>The reflective and participatory experience prompts the audiences to question whether technology can truly reverse environmental destruction. The core message is to celebrate scientific progress while also clarify that no artificial effort can fully replicate nature's original balance. The art direction combines organic, bioluminescent-inspired aesthetics with mechanical, industrial textures, reinforcing the tension between nature and synthetic intervention.</p>
+                <br>
+                <!--Project links-->
+                <div class="project-links">
+                    <!--Open in a separate tab-->
+                    <a href="https://reeflectionweekly.myblog.arts.ac.uk/" target="_blank" rel="noopener noreferrer">WEEKLY BLOG HERE</a><br>
+                    <a href="https://git.arts.ac.uk/21020295/Reeflection" target="_blank" rel="noopener noreferrer">GITHUB LINK HERE</a>
+                </div>
+            </section>
+        </div>
+    
+    </body>
+</html>

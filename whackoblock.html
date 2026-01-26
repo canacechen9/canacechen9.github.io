@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">                     <!--The language of this page-->
+    <head>
+        <meta charset="UTF-8"> <!--HTML5 spec encourages developers to use this-->
+        <script src="constant.js"></script> <!--Link to javascript-->
+        <script src="project.js" defer></script>
+        <script>printHTMLhead();</script>
+        <title>Whack-a-block</title>  <!--Title that appears on the browser tab/window bar-->
+        <meta name="description" content="Canace Chen's Website: Whack-a-block">
+    </head>
+
+    <body style="--project-color: #565a36; --text-color: #fff; --text-color-greyed: #999;" >
+        <!--top navigation bar: link to home and previous page-->
+        <div class="projectnav" id="projectnav">
+            <script>printHTMLprojectnav();</script>
+        </div>
+
+        <div class="project-wrapper" id="project-config" 
+     data-slides='[
+            { "type": "image", "url": "work/20210205.jpg" },
+            { "type": "video", "url": "work/20210205.MOV" }
+            ]'>
+            <!--Gallery slide-->
+            <div class="slide-viewport" id="slideArea">
+                <div class="media-frame">
+                </div>
+                
+                <div id="custom-cursor">NEXT</div>
+            </div>
+            <!--Project key info-->
+            <div class="project-info-bar">
+                <div class="info-item info-left">Whack-a-block</div>
+                <div class="info-item info-center">Feb 05 2021</div>
+                <div class="info-item info-right">Citipointe Christian College</div>
+            </div>
+            <!--Project details-->
+            <section class="project-details">
+                <!--Project summary tags-->
+                <h2>#Interactive Installation #Gamified Experience #Sensor System #Arduino #Capacitive Sensor</h2>
+                <!--Project details body-->
+                <p>This is an interactive artwork that combines photography, digital illustration and Arduino. The artwork was inspired by the classic game, Whack-A-Mole. When an acrylic block lights up, the viewer needs to tap the block, then another block will light up. The blocks represent different pressure we have to deal with in our everyday lives. The gamification invites viewers to actually get involved in the artwork and experience the 'pressure' coming one after another.</p>
+                <br>
+                <!--Project links-->
+                <div class="project-links">
+                    <!--Open in a separate tab-->
+                    <a href="https://github.com/canacechen9/Whack-a-block" target="_blank" rel="noopener noreferrer">GITHUB LINK HERE</a>
+                </div>
+            </section>
+        </div>
+    
+    </body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">                     <!--The language of this page-->
+    <head>
+        <meta charset="UTF-8"> <!--HTML5 spec encourages developers to use this-->
+        <script src="constant.js"></script> <!--Link to javascript-->
+        <script src="project.js" defer></script>
+        <script>printHTMLhead();</script>
+        <title>Fashion Illustration</title>  <!--Title that appears on the browser tab/window bar-->
+        <meta name="description" content="Canace Chen's Website: Fashion Illustration">
+    </head>
+
+    <body style="--project-color: #9bb9f8; --text-color: #000; --text-color-greyed: #444;" >
+        <!--top navigation bar: link to home and previous page-->
+        <div class="projectnav" id="projectnav">
+            <script>printHTMLprojectnav();</script>
+        </div>
+
+        <div class="project-wrapper" id="project-config" 
+     data-slides='[
+            { "type": "image", "url": "work/20190106.JPG" },
+            { "type": "image", "url": "work/20190107.JPG" },
+            { "type": "image", "url": "work/20190108.jpeg" },
+            { "type": "image", "url": "work/20190109.jpeg" },
+            { "type": "image", "url": "work/20190216.JPG" }
+            ]'>
+            <!--Gallery slide-->
+            <div class="slide-viewport" id="slideArea">
+                <div class="media-frame">
+                </div>
+                
+                <div id="custom-cursor">NEXT</div>
+            </div>
+            <!--Project key info-->
+            <div class="project-info-bar">
+                <div class="info-item info-left">Fashion Illustration</div>
+                <div class="info-item info-center">Jan-Feb 2019</div>
+                <div class="info-item info-right">Practice</div>
+            </div>
+            <!--Project details-->
+            <section class="project-details">
+                <!--Project summary tags-->
+                <h2>#Fashion Illustration #Watercolour #Coloured Pencil #Marker Pen</h2>
+                <!--Project details body-->
+                <p>Fashion illustration practice.</p>
+            </section>
+        </div>
+    
+    </body>
+
+</html>

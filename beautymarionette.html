@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">                     <!--The language of this page-->
+    <head>
+        <meta charset="UTF-8"> <!--HTML5 spec encourages developers to use this-->
+        <script src="constant.js"></script> <!--Link to javascript-->
+        <script src="project.js" defer></script> 
+        <script>printHTMLhead();</script>
+        <title>Beauty Marionette</title>  <!--Title that appears on the browser tab/window bar-->
+        <meta name="description" content="Canace Chen's Website: Beauty Marionette">
+    </head>
+
+    <body style="--project-color: #a1b436; --text-color: #000; --text-color-greyed: #444;" >
+        <!--top navigation bar: link to home and previous page-->
+        <div class="projectnav" id="projectnav">
+            <script>printHTMLprojectnav();</script>
+        </div>
+
+        <div class="project-wrapper" id="project-config" 
+     data-slides='[
+            { "type": "image", "url": "work/20190906.jpg" },
+            { "type": "image", "url": "work/20190906_1.jpg" }
+            ]'>
+            <!--Gallery slide-->
+            <div class="slide-viewport" id="slideArea">
+                <div class="media-frame">
+                </div>
+                
+                <div id="custom-cursor">NEXT</div>
+            </div>
+            <!--Project key info-->
+            <div class="project-info-bar">
+                <div class="info-item info-left">Beauty Marionette</div>
+                <div class="info-item info-center">Sep 06 2019</div>
+                <div class="info-item info-right">Citipointe Christian College</div>
+            </div>
+            <!--Project details-->
+            <section class="project-details">
+                <!--Project summary tags-->
+                <h2>#Lino Printing #Graphic Art #Process Art #Cubism #Art As Code #Social Commentary #Perceptual Shift #Identity</h2>
+                <!--Project details body-->
+                <p>I got my idea for the artwork from a conversation with friends. We talked about that many Asian girls have plastic surgeries or make up to make them look like western girls because they believe western girls are more attractive. Based on my experience of living in China, most of girls think larger eyes, high bridged noses and fairer skin are the standards of beauty; brown, maroon and blonde are the most popular hair dye colours, and same for blue, green and grey cosmetic contact lenses. </p>
+                <p>I was very curious about the reasons behind it so I did some research on this phenomenon. A Chinese film director once pointed out,"the mentality today is to follow these trends without really knowing if it suits their features." Despite the beauty standard is getting more diverse globally, a western-centric ideal of beauty still dominates in East and Southeast Asia. Also, in terms of economy, multinational beauty brands play a big role. Since East and Southeast Asia is densely populated which makes it an emerging market with trillions of dollars of purchasing power, multinational beauty brands press on their products, techniques and advertising that remain more one-size-fit-all than inclusive.</p>
+                <p>This artwork used lino printing. It consists of 4 separate parts of a Western girl and an Asian girl. Each part was printed with the same colours but just in different orders, which shows that them are essentially the same but also beautiful in different ways. The artwork is suspended from the roof like a marionette which exposes the invisible manipulation of beauty standards by culture, beliefs, politics and economy.</p>
+                <br>
+                <!--Project links-->
+                <div class="project-links">
+                    <!--Open in a separate tab-->
+                    <a href="https://20190906.pdf" target="_blank" rel="noopener noreferrer">FULL PORTFOLIO HERE</a><br>
+                </div>
+            </section>
+        </div>
+    
+    </body>
+
+</html>

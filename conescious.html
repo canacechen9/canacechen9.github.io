@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">                     <!--The language of this page-->
+    <head>
+        <meta charset="UTF-8"> <!--HTML5 spec encourages developers to use this-->
+        <script src="constant.js"></script> <!--Link to javascript-->
+        <script src="project.js" defer></script> 
+        <script>printHTMLhead();</script>
+        <title>Cone-scious</title>  <!--Title that appears on the browser tab/window bar-->
+        <meta name="description" content="Canace Chen's Website: Cone-scious">
+    </head>
+
+    <body style="--project-color: #000; --text-color: #fff; --text-color-greyed: #999;" >
+        <!--top navigation bar: link to home and previous page-->
+        <div class="projectnav" id="projectnav">
+            <script>printHTMLprojectnav();</script>
+        </div>
+
+        <div class="project-wrapper" id="project-config" 
+     data-slides='[
+            { "type": "image", "url": "work/20220325_2.png" },
+            { "type": "image", "url": "work/20220325.png" },
+            { "type": "image", "url": "work/20220325_1.png" },
+            { "type": "image", "url": "work/makecodeQR.gif" }
+            ]'>
+            <!--Gallery slide-->
+            <div class="slide-viewport" id="slideArea">
+                <div class="media-frame">
+                </div>
+                
+                <div id="custom-cursor">NEXT</div>
+            </div>
+            <!--Project key info-->
+            <div class="project-info-bar">
+                <div class="info-item info-left">Cone-scious</div>
+                <div class="info-item info-center">Mar 25 2022</div>
+                <div class="info-item info-right">Microsoft MakeCode Game Jam 2022 London</div>
+            </div>
+            <!--Project details-->
+            <section class="project-details">
+                <!--Project summary tags-->
+                <h2>#Gamified Learning #Digital Inclusion #Game Design #UI/UX Design #Interactive Storytelling #Design for Colourblindness #Accessibility #MakeCode Arcade</h2>
+                <!--Project details body-->
+                <p>This project was made in collaboration with Diana Milena for the Microsoft MadeCode Game Jam 2022. You can scan the QR code to play the game.</p>
+                <p>The project was made to raise awareness for colour blindness. We designed 3 small retro games based on the 3 types of colour blindness-- deuteranopia, protanopia and tritanopia. The concept is to collect the missing cone cells that cause the colour blindness. We extracted the colours from the windows 11 accessibility colour palette. Each of these palettes was made to help people with a certain type of colour blindness, so that they can experience the game like everyone else, and other people can gain a perspective from their world. </p>
+                <br>
+                <!--Project links-->
+                <div class="project-links">
+                    <!--Open in a separate tab-->
+                    <a href="work/20220325_1.pdf" target="_blank" rel="noopener noreferrer">FULL PORTFOLIO</a><br>
+                    <a href="https://miro.com/app/board/uXjVL09Z_iM=/?share_link_id=28661662991" target="_blank" rel="noopener noreferrer">RESEARCH & DESIGN</a><br>
+                    <a href="work/20220325.pdf" target="_blank" rel="noopener noreferrer">FULL PRESENTATION</a><br>
+                </div>
+            </section>
+        </div>
+    
+    </body>
+   
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">                     <!--The language of this page-->
+    <head>
+        <meta charset="UTF-8"> <!--HTML5 spec encourages developers to use this-->
+        <script src="constant.js"></script> <!--Link to javascript-->
+        <script src="project.js" defer></script>
+        <script>printHTMLhead();</script>
+        <title>Coral Vita</title>  <!--Title that appears on the browser tab/window bar-->
+        <meta name="description" content="Canace Chen's Website: Coral Vita">
+    </head>
+
+    <body style="--project-color: #fff; --text-color: #000; --text-color-greyed: #444;" >
+        <!--top navigation bar: link to home and previous page-->
+        <div class="projectnav" id="projectnav">
+            <script>printHTMLprojectnav();</script>
+        </div>
+
+        <div class="project-wrapper" id="project-config" 
+     data-slides='[
+            { "type": "image", "url": "work/202312b.jpeg" },
+            { "type": "image", "url": "work/202312b_1.jpeg" }
+            ]'>
+            <!--Gallery slide-->
+            <div class="slide-viewport" id="slideArea">
+                <div class="media-frame">
+                </div>
+                
+                <div id="custom-cursor">NEXT</div>
+            </div>
+            <!--Project key info-->
+            <div class="project-info-bar">
+                <div class="info-item info-left">Coral Vita (GPJ)</div>
+                <div class="info-item info-center">Dec 2023</div>
+                <div class="info-item info-right">DP World Pavilion at COP28</div>
+            </div>
+            <!--Project details-->
+            <section class="project-details">
+                <!--Project summary tags-->
+                <h2>#Gamified learning #Interactive Storytelling #Environmental Impact #User Engagement #UI/UX Design #Brand Partnership</h2>
+                <!--Project details body-->
+                <p>This activation was part of the DP World Pavilion at the 28th United Nations Climate Change Conference (COP28). It showcased DP World’s commitment to protecting coral reefs through strategic real estate management. As the users engage with the interactive table, witness the transformative power of coral restoration in action. Initially, the table portrays a depleted underwater ecosystem, prompting the users to take action by placing corals onto its surface. With each coral addition, the scene blossoms into a vibrant marine habitat, teeming with life as fish and other marine creatures flock to the newly restored reef.</p>
+                <p>The experience reflected DP World’s vision of reimagining ports as guardians of ocean health. Throughout the journey, alternating messages provide insights into DP World’s partnership with Coral Vita and the broader narrative of ocean conservation. And as the table reaches its maximum capacity, a gentle reminder underscores the importance of balanced reef growth, ensuring sustained vitality for marine ecosystems.</p>
+            </section>
+        </div>
+    
+    </body>
+
+</html>

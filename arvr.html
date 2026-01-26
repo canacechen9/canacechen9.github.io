@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">                     <!--The language of this page-->
+    <head>
+        <meta charset="UTF-8"> <!--HTML5 spec encourages developers to use this-->
+        <script src="constant.js"></script> <!--Link to javascript-->
+        <script src="category.js" defer></script>
+        <script>printHTMLhead();</script>
+        <title>AR/VR</title>  <!--Title that appears on the browser tab/window bar-->
+        <meta name="description" content="Category: AR/VR">
+    </head>
+
+    <body>
+        <!--Top navigation bar: link to home, info pages, and switch between grid and index views-->
+        <div class="topnav" id="topnav">
+            <script>printHTMLcatenav();</script>
+        </div>
+
+        <!--Category Title-->
+        <div class="category-title">
+            <h1>AR/VR</h1>
+        </div>
+
+        <main>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+            
+            <div id="content-wrapper" class="index-view"> <div class="projects">
+            <ul class="project-list">
+
+                <li>
+                    <a href="gpjactivationsgallery.html" class="project-item" data-color="#251e19" data-image="work/20240904cover.jpeg">
+                    <div class="grid-image-container">
+                        <img src="work/20240904cover.jpeg" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">GPJ Activation Gallery</span>
+                        <span class="desc">Interactive & Immersive Virtual Gallery</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="ciscolivecircuitchallenge.html" class="project-item" data-color="#0b419c" data-image="work/202402acover.jpeg" >
+                    <div class="grid-image-container">
+                        <img src="work/202402acover.jpeg" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">Cisco Live Circuit Challenge</span>
+                        <span class="desc">AR game for Cisco × McLaren</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="globalcafe.html" class="project-item" data-color="#ffffff" data-image="work/202312acover.jpeg" data-theme="light">
+                    <div class="grid-image-container">
+                        <img src="work/202312acover.jpeg" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">Global Café</span>
+                        <span class="desc">Gamified café ordering experience</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="animalbiscuit.html" class="project-item" data-color="#212146" data-image="work/20221214.gif">
+                    <div class="grid-image-container">
+                        <img src="work/20221214.gif" class="grid-image">
+                    </div>
+                    <div class="project-text">
+                        <span class="name">Animal Biscuit</span>
+                        <span class="desc">AR animation over photo</span>
+                    </div>
+                    </a>
+                </li>
+                
+            </ul>
+            </div></div>
+
+            <div id="project-preview-container">
+                <img id="project-preview-image" src="" alt="">
+            </div>
+
+            <div class="myfooter" id="myfooter">
+                <script>printHTMLmyfooter();</script>
+            </div>
+
+        </main>
+
+    </body>
+</html>

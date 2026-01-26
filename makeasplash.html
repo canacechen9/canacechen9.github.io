@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">                     <!--The language of this page-->
+    <head>
+        <meta charset="UTF-8"> <!--HTML5 spec encourages developers to use this-->
+        <script src="constant.js"></script> <!--Link to javascript-->
+        <script src="project.js" defer></script> 
+        <script>printHTMLhead();</script>
+        <title>Make a Splash</title>  <!--Title that appears on the browser tab/window bar-->
+        <meta name="description" content="Canace Chen's Website: Make a Splash">
+    </head>
+
+    <body style="--project-color: #0a194c; --text-color: #fff; --text-color-greyed: #999;" >
+        <!--top navigation bar: link to home and previous page-->
+        <div class="projectnav" id="projectnav">
+            <script>printHTMLprojectnav();</script>
+        </div>
+
+        <div class="project-wrapper" id="project-config" 
+     data-slides='[
+            { "type": "image", "url": "work/202405a.jpeg" }
+            ]'>
+            <!--Gallery slide-->
+            <div class="slide-viewport" id="slideArea">
+                <div class="media-frame">
+                </div>
+                
+                <div id="custom-cursor">NEXT</div>
+            </div>
+            <!--Project key info-->
+            <div class="project-info-bar">
+                <div class="info-item info-left">Make a Splash (GPJ)</div>
+                <div class="info-item info-center">May 2024</div>
+                <div class="info-item info-right">Click24 Amsterdam & Miami</div>
+            </div>
+            <!--Project details-->
+            <section class="project-details">
+                <!--Project summary tags-->
+                <h2>#Immersive Projections #Interactive Space #User Experience #Brand Story #Experiential Marketing #Simulation #Twinmotion</h2>
+                <!--Project details body-->
+                <p>This project invites the users to experience the magic of immersive projections at the interactive space. The users use the buttons on the wall to transform their surroundings based on audience input—one moment they’re in a swimming pool, the next, under a blue sky with clouds, or even on a thrilling roller coaster ride. As they explore, captivating projections and engaging voiceovers reveal the tools and benefits available through Click. This dynamic setup invites users to set their intentions, capture memorable moments with photos, and ignite their curiosity.</p>
+                <p>The users move around the space to discover and hear about the advantages of adopting different solutions. This activation offers a unique and memorable way to learn about the exciting opportunities Click can offer, making it an unforgettable experience for all users. </p>
+            </section>
+        </div>
+    
+    </body>
+
+</html>

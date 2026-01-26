@@ -1,0 +1,664 @@
+@charset "utf-8";
+/* CSS Document */
+*{box-sizing: border-box;}
+
+/* Prevent ancher link content from being blocked by topnav */
+/* Ref: https://css-tricks.com/fixed-headers-on-page-links-and-overlapping-content-oh-my/ */
+html {
+	scroll-padding-top: 130px; /* height of sticky header */
+}
+
+/* General body setting */
+body{
+	width: 100%;
+	font-family: Arial, Copperplate Gothic Light;
+	padding: 0px; 
+	transition: background-color 0.4s ease;
+	background-color: black; 
+	margin: 0;
+	color: var(--text-main); /* Global text color */
+}
+
+/* Header & top navigation */
+.topnav{
+	position: -webkit-sticky; /* Safari */
+    position: sticky;
+	top: 0;
+    z-index: 1000; /* Keeps it above your images/content */
+    width: 100%; 
+    box-sizing: border-box; /* Crucial: includes padding in the 100% width */
+    padding: 0px 30px;
+	background-color: inherit; /* Matches the body background */
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+.nav-item{
+	font-size: 26px;
+	color: var(--text-main);
+	text-decoration: none;
+    background: none;
+	border: none;
+    cursor: pointer;
+    padding: 30px 0px;
+}
+
+/* This ensures no background appears even when hovering or clicking */
+.nav-item:hover, 
+.nav-item:active, 
+.nav-item:focus {
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+/* Ensure the middle item stays exactly centered regardless of side-item width */
+.toggle-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+	line-height: 1; 
+}
+
+#view-toggle {
+    /* Ensure the button itself has no extra margins or line-height issues */
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+}
+
+.right-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between Resume and Info */
+}
+
+.resume-link {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  font-size: 26px;
+  padding: 0px;
+}
+
+/* When the user hovers over the right section, show Resume */
+.right-nav:hover .resume-link {
+  opacity: 1;
+  visibility: visible;
+}
+
+.right-group {
+  display: flex;
+  align-items: flex-start; /* Aligns Back button with the top of the Info text */
+  gap: 20px; /* Space between Back and the Info/Resume stack */
+}
+
+.info-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Aligns Info and Resume to the left */
+}
+
+/* Show Resume on Hover */
+.info-stack:hover .resume-link {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Header & top navigation for project pages*/
+.projectnav{
+	position: -webkit-sticky; /* Safari */
+    position: sticky;
+	top: 0;
+    z-index: 1000; /* Keeps it above your images/content */
+    width: 100%; 
+    box-sizing: border-box; /* Crucial: includes padding in the 100% width */
+    padding: 0px 30px;
+	background-color: var(--project-color); /* Matches the body background */
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.projectnav .nav-item{
+	color: var(--text-color);
+}
+
+/* Category banner */
+:root {
+  --base-font-size: 22px;
+  --magnified-font-size: 30px;
+  --bg-color: inherit;
+}
+
+.banner-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--bg-color);
+  border-top: 2px solid var(--text-main);
+  border-bottom: 2px solid var(--text-main);
+  /* Adjust height to accommodate magnified text without clipping */
+  height: 52px; 
+  display: flex;
+  align-items: flex-end; /* Aligns categories to the bottom */
+  padding-bottom: 10px;
+  margin-bottom: 120px; 
+}
+
+.banner-track {
+  display: flex;
+  white-space: nowrap;
+  will-change: transform;
+  align-items: flex-end; /* Ensure items stay bottom-aligned when they grow */
+}
+
+.track-content {
+  display: flex;
+  align-items: flex-end;
+}
+
+.category a{
+  font-size: var(--base-font-size);
+  text-decoration: none;
+  padding: 0 10px; /* Increased spacing for clarity */
+  display: inline-block;
+  line-height: 1;
+  /* Removal of all transitions for a sudden 'toggle' effect */
+  transition: none !important; 
+  color: var(--text-main);
+}
+
+.category a:hover {
+  font-size: var(--magnified-font-size);
+}
+
+:root {
+  /* Default Dark Theme Colors */
+  --text-main: #fff;
+  --text-muted: #999;
+  --dash-color: #fff;
+}
+
+/* This class will be added by JS when the background is light */
+body.light-ui {
+  --text-main: #000;
+  --text-muted: #444;
+  --dash-color: #000;
+}
+
+/* Category page title */
+.category-title h1{
+	font-size: 32;
+	font-weight: 200;
+	padding-left: 150px;
+	padding-top: 12px;
+	padding-bottom: 50px;
+}
+
+/* project list */
+.projects{
+  padding: 0px 10% 80px 10%;
+}
+
+.project-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-item {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+
+  position: relative;
+  padding-left: 0;
+  transition: padding-left 0.25s ease;
+}
+
+/* dash */
+.project-item::before {
+  content: "—";
+  color: var(--dash-color);
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.2s ease, transform 0.25s ease;
+}
+
+.project-item:hover {
+  padding-left: 30px;
+}
+
+.project-item:hover::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* typography */
+.project-item .name,
+.project-item .desc {
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--text-main);
+  transition: color 0.4s ease;
+  padding-right: 5px;
+}
+
+.project-item .desc {
+  color: var(--text-muted);
+  transition: color 0.4s ease;
+}
+
+/* Container for the preview images */
+#project-preview-container {
+  position: fixed;
+  right: 10%; /* Adjust this to move the "center point" left or right */
+  top: 29%;
+  width: 450px; /* Fixed area for alignment */
+  height: 450px;
+  pointer-events: none; /* User can't click the image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+#project-preview-image {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  /* Ensures centers are aligned even if aspect ratios differ */
+  object-fit: contain; 
+  /* Ensure it doesn't look blurry when upscaled */
+  image-rendering: auto;
+}
+
+#project-preview-image.visible {
+  opacity: 1;
+}
+
+/* --- GRID VIEW SPECIFIC --- */
+.grid-view .project-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 projects per row */
+    gap: 80px 100px; /* Space between rows and columns */
+}
+
+.grid-view .project-item {
+    display: flex;
+    flex-direction: column; /* Stack image, then name, then desc */
+    gap: 10px;
+    padding-left: 0 !important; /* Remove the Index shift */
+}
+
+.grid-view .grid-image-container {
+    display: flex;            /* Enables centering */
+    align-items: center;      /* Centers vertically */
+    justify-content: center;   /* Centers horizontally */
+    width: 100%;
+    aspect-ratio: 1 / 1;          
+    background-color: transparent; 
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.grid-view .grid-image {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.grid-view .project-item::before {
+    display: none; /* Remove the dash in grid view */
+}
+
+/* --- INDEX VIEW SPECIFIC --- */
+.index-view .grid-image-container {
+    display: none; /* Hide grid images when in list mode */
+}
+
+/* --- THE "DISAPPEAR" EFFECT --- */
+/* When hovering over one item in Grid, fade out the others */
+.grid-view .project-list:hover .project-item:not(:hover) {
+    opacity: 0.04;
+    transition: opacity 0.3s ease;
+}
+
+.index-view {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* This centers the content vertically */
+    
+    /* 100vh = full screen height. 
+       We subtract the approximate height of your header (e.g., 80px) 
+       so the "center" is calculated based on the available space below the nav. */
+    min-height: calc(100vh - 300px); 
+    
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Responsive design for project list */
+@media (max-width: 980px) {
+	/* Category page title */
+	.category-title h1{
+		padding: 40vw 10%;
+	}
+    /* Change Grid to 1 project per row */
+    .grid-view .project-list {
+        grid-template-columns: 1fr; 
+        gap: 300px;
+		align-items: center;
+		display: flex;
+        flex-direction: column;
+        align-items: center; /* Centers the 60% wide items */
+        padding: 350px 0;
+    }
+
+	.grid-view .grid-image-container {
+        width: 60vw;        /* Exactly 60% of screen width */
+        aspect-ratio: auto; /* Remove the square constraint */
+        height: auto;       /* Let the height grow naturally */
+        display: block;     /* Regular block flow for text to sit under */
+    }
+
+	.grid-view .grid-image {
+        width: 100%;        /* Fills the 60vw container */
+        height: auto;       /* Maintains original ratio */
+        display: block;
+    }
+
+	.grid-view .project-text {
+        width: 60vw;        /* Matches image width for perfect alignment */
+        text-align: left;
+    }
+	.banner-container{
+		margin-bottom: 40vh;
+	}
+
+	.index-view .project-list{
+		padding: 0vh 5px 50vh 5px;
+	}
+
+	.index-view .project-text{
+		padding: 5px;
+	}
+
+	/* Default state for project text on mobile */
+    .index-view .project-item .name,
+    .index-view .project-item .desc {
+        font-size: 24px; 
+		opacity: 0.6;
+    }
+
+	/* Active state triggered by the Intersection Observer */
+    .index-view .project-item.is-active .name,
+    .index-view .project-item.is-active .desc {
+        font-size: 30px;
+        opacity: 1; /* Ensures it's fully bright when 'hovered' */
+    }
+
+    /* Move Preview Image to Bottom Middle */
+    #project-preview-container {
+        right: 50%;
+        left: 50%;
+        transform: translateX(-50%); /* Centers it horizontally */
+        top: auto;
+        bottom: 10%; /* Distance from bottom */
+        width: 60vw; /* Larger on mobile */
+        height: 40vh;
+        /* max-height: 40vh; */
+    }
+
+	#project-preview-image {
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		/* Ensures centers are aligned even if aspect ratios differ */
+		object-fit: contain; 
+		/* Ensure it doesn't look blurry when upscaled */
+		image-rendering: auto;
+	}
+
+}
+
+/* Project page */
+/* media slide */
+.project-wrapper {
+	/* vh = viewport height. 100vh is exactly the screen height */
+  min-height: 100vh;
+  /* Use flexbox to push the description to fill the remaining space */
+  display: flex;
+  flex-direction: column;
+}
+
+.slide-viewport {
+  position: relative;
+  width: 100%;
+  height: 80vh; /* Total height of the slider area */
+  background-color: var(--project-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: none;
+  overflow: hidden;
+}
+
+.media-frame {
+  height: 70%; /* As requested: height is 70% of the slider */
+  width: 50%;  /* Allow width to expand to show full ratio */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-item {
+	height:100%;
+    width: auto;
+	max-width: 100%;
+    display: block;
+    pointer-events: none; /* Prevents image dragging from breaking the click logic */
+	flex-shrink: 0;
+}
+
+iframe.slide-item {
+  border: none;       /* Removes the default browser border */
+  height: 100%;      
+  aspect-ratio: 1 / 1; /* p5 sketches are often square; adjust if yours is 16/9 */
+  max-width: 100%;
+}
+
+[data-interactive="true"] #custom-cursor {
+    display: none !important;
+}
+
+[data-interactive="true"] .slide-viewport {
+    cursor: auto !important;
+}
+
+/* Custom Cursor Styling */
+#custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  color: var(--text-color);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+/* Project key info */
+.project-info-bar {
+  display: flex;
+  justify-content: space-between; /* Pushes items to the edges and center */
+  align-items: center;           /* Forces everything onto one vertical line */
+  padding: 0px 40px;            /* Adjust vertical/horizontal spacing */
+  background-color: var(--project-color);
+  color: var(--text-color);
+  font-size: 24px;
+  border: none;
+}
+
+/* Ensure the items take up equal space/alignment */
+.info-item {
+  flex: 1;
+  white-space: nowrap;
+}
+.info-center { text-align: center; }
+.info-right { text-align: right; }
+
+/* Project detail info */
+.project-details {
+	flex-grow: 1;
+	background-color: var(--project-color);
+    margin: 0;
+    padding: 60px 20px;
+    line-height: 1.6;
+}
+
+/* Project summary tags */
+.project-details h2{
+	padding: 20px 20px 0px 20px;
+	font-size: 20px;
+	font-style: italic; 
+	font-weight: 100;
+	color: var(--text-color-greyed);
+}
+
+.project-details p{
+	padding: 10px 20px 0px 20px;
+	font-size: 20px;
+	font-weight: 100;
+	color: var(--text-color);
+}
+
+.project-links a{
+	padding: 10px 20px 10px 20px;
+	font-size: 20px;
+	font-weight: 100;
+	color: var(--text-color);
+}
+
+/* --- Responsive settings for project page --- */
+@media (max-width: 980px) {
+    
+    /* 1. Remove the "whole page" height setting */
+    .slide-viewport {
+        height: auto;          /* Allow it to grow with the image */
+        min-height: 40vh;      /* Ensure it doesn't disappear if empty */
+        padding: 60px 0;       /* Add some space for your top nav */
+        cursor: default;       /* Custom cursor is annoying on touch screens */
+    }
+
+    /* 2. Fix the Stretching */
+    .media-frame {
+        height: auto;          /* Stop forcing 70% height */
+        width: 90%;
+        display: block;        /* Flow naturally */
+    }
+
+    .slide-item {
+        width: 100%;           /* Fill the width of the phone */
+        height: auto;          /* Maintain original aspect ratio */
+        max-height: none;      /* Remove the height limit */
+        object-fit: contain;
+    }
+
+    /* 4. Move Info Bar from Row to Column */
+    .project-info-bar {
+        flex-direction: column; /* Stack vertically */
+        align-items: flex-start; /* Align all text to the left */
+        padding: 20px 5%;
+		font-size: 22px;
+        gap: 10px;             
+    }
+
+    .info-item {
+        text-align: left !important; /* Force left alignment */
+        flex: none;
+    }
+
+    /* Hide the custom cursor on mobile (it's confusing with touch) */
+    /* #custom-cursor {
+        display: none !important;
+    } */
+}
+
+/* Info page */
+/* Social contact links */
+.contact-links{
+	padding: 150px 10% 0px 10%;
+}
+
+.contact-links a{
+	color: var(--text-color);
+	font-size: 32px;
+	padding-right: 10px;
+}
+
+/* Info body */
+.info-body{
+	padding: 0px 10%;
+	color: var(--text-color);
+	font-size: 22px;
+}
+
+/* Info skills */
+.info-skills{
+	padding: 30px 10%;
+}
+
+.info-skills h3{
+	color: #999;
+	font-size: 20px;
+}
+
+.info-skills p{
+	color: #fff;
+	font-size: 20px;
+	font-weight: 100;
+}
+
+/* Info Clients */
+.info-clients{
+	padding: 0px 10% 80px 10%;
+}
+
+.info-clients h3{
+	color: #999;
+	font-size: 20px;
+}
+
+.info-clients p{
+	color: #fff;
+	font-size: 20px;
+	font-weight: 100;
+}
+
+/* Footer */
+.myfooter{
+	color: var(--text-color);
+	position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 1000; /* Keeps it above other content */
+    
+    /* Ensure no default browser margins interfere */
+    margin: 0;
+    padding: 0;
+}
+

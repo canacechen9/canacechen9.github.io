@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">                     <!--The language of this page-->
+    <head>
+        <meta charset="UTF-8"> <!--HTML5 spec encourages developers to use this-->
+        <script src="constant.js"></script> <!--Link to javascript-->
+        <script src="project.js" defer></script> 
+        <script>printHTMLhead();</script>
+        <title>Roller Coaster</title>  <!--Title that appears on the browser tab/window bar-->
+        <meta name="description" content="Canace Chen's Website: Roller Coaster">
+    </head>
+
+    <body style="--project-color: #fff; --text-color: #000; --text-color-greyed: #444;" >
+        <!--top navigation bar: link to home and previous page-->
+        <div class="projectnav" id="projectnav">
+            <script>printHTMLprojectnav();</script>
+        </div>
+
+        <div class="project-wrapper" id="project-config" 
+     data-slides='[
+            { "type": "image", "url": "work/20200220.png" }
+            ]'>
+            <!--Gallery slide-->
+            <div class="slide-viewport" id="slideArea">
+                <div class="media-frame">
+                </div>
+                
+                <div id="custom-cursor">NEXT</div>
+            </div>
+            <!--Project key info-->
+            <div class="project-info-bar">
+                <div class="info-item info-left">Roller Coaster</div>
+                <div class="info-item info-center">Feb 20 2020</div>
+                <div class="info-item info-right">Citipointe Christian College</div>
+            </div>
+            <!--Project details-->
+            <section class="project-details">
+                <!--Project summary tags-->
+                <h2>#Mathematical Model #Calculus #Polynomial Function #Trigonometric Function #Exponential Function #Logarithmic Function #Function Graphing</h2>
+                <!--Project details body-->
+                <p>This Problem-solving and modelling task is to design a profile of a roller coaster and calculate its excitement factor. To come up with the design, a minimum of 3 types of functions including polynomial, trigonometric, exponential and logarithmic are used to generate the model. The excitement factor depends on the angle of steepest descent in each drop and the total vertical distance of the top. Both technological and mathematical procedures are used to design the profile, including simultaneous equation solving, calculus and trigonometry, and technology, for example Excel, graphic calculator and Desmos. The report also includes evaluation and recommendations to further discuss the strength and limitation of the model.</p>
+                <br>
+                <!--Project links-->
+                <div class="project-links">
+                    <!--Open in a separate tab-->
+                    <a href="work/20200220.pdf" target="_blank" rel="noopener noreferrer">FULL REPORT HERE</a><br>
+                    <a href="work/20200220.xlsx" target="_blank" rel="noopener noreferrer">EXCEL DATA HERE</a>
+                </div>
+            </section>
+        </div>
+    
+    </body>
+
+</html>

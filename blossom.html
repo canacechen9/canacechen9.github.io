@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">                     <!--The language of this page-->
+    <head>
+        <meta charset="UTF-8"> <!--HTML5 spec encourages developers to use this-->
+        <script src="constant.js"></script> <!--Link to javascript-->
+        <script src="project.js" defer></script> 
+        <script>printHTMLhead();</script>
+        <title>Blossom</title>  <!--Title that appears on the browser tab/window bar-->
+        <meta name="description" content="Canace Chen's Website: Blossom">
+    </head>
+
+    <body style="--project-color: #d4d6cd; --text-color: #000; --text-color-greyed: #444;" >
+        <!--top navigation bar: link to home and previous page-->
+        <div class="projectnav" id="projectnav">
+            <script>printHTMLprojectnav();</script>
+        </div>
+
+        <div class="project-wrapper" id="project-config" 
+     data-slides='[
+            { "type": "image", "url": "work/20191125.jpg" }
+            ]'>
+            <!--Gallery slide-->
+            <div class="slide-viewport" id="slideArea">
+                <div class="media-frame">
+                </div>
+                
+                <div id="custom-cursor">NEXT</div>
+            </div>
+            <!--Project key info-->
+            <div class="project-info-bar">
+                <div class="info-item info-left">Blossom</div>
+                <div class="info-item info-center">Nov 25 2019</div>
+                <div class="info-item info-right">Citipointe Christian College</div>
+            </div>
+            <!--Project details-->
+            <section class="project-details">
+                <!--Project summary tags-->
+                <h2>#Mixed-media Art #Artistic Exploration #Organic Patterns #Printmaking #Experimental Media #Watercolour Textures</h2>
+                <!--Project details body-->
+                <p>This Artwork was created after a school art camp on the Moreton Island. I used different patterns of fruits and vegetables and stamped them on a wooden board with watercolour. The patterns together look random and abstract, however, each one of them has their own unique nutrition and essence inside. This artwork tells my experience of finding the 'nutrition' of new interests and concepts of art through 'random' experiments during the camp.</p>
+            </section>
+        </div>
+    
+    </body>
+
+</html>

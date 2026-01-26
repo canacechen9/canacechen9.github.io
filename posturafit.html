@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">                     <!--The language of this page-->
+    <head>
+        <meta charset="UTF-8"> <!--HTML5 spec encourages developers to use this-->
+        <script src="constant.js"></script> <!--Link to javascript-->
+        <script src="project.js" defer></script>
+        <script>printHTMLhead();</script>
+        <title>PosturaFit</title>  <!--Title that appears on the browser tab/window bar-->
+        <meta name="description" content="Canace Chen's Website: PosturaFit">
+    </head>
+
+    <body style="--project-color: #b4a88b; --text-color: #000; --text-color-greyed: #444;" >
+        <!--top navigation bar: link to home and previous page-->
+        <div class="projectnav" id="projectnav">
+            <script>printHTMLprojectnav();</script>
+        </div>
+
+        <div class="project-wrapper" id="project-config" 
+     data-slides='[
+            { "type": "image", "url": "work/20241228.png" },
+            { "type": "image", "url": "work/20241228_1.png" },
+            { "type": "image", "url": "work/20241228_2.jpeg" },
+            { "type": "image", "url": "work/20241228_3.jpeg" }
+            ]'>
+            <!--Gallery slide-->
+            <div class="slide-viewport" id="slideArea">
+                <div class="media-frame">
+                </div>
+                
+                <div id="custom-cursor">NEXT</div>
+            </div>
+            <!--Project key info-->
+            <div class="project-info-bar">
+                <div class="info-item info-left">PosturaFit</div>
+                <div class="info-item info-center">Dec 28 2024</div>
+                <div class="info-item info-right">UAL Creative Computing Institute</div>
+            </div>
+            <!--Project details-->
+            <section class="project-details">
+                <!--Project summary tags-->
+                <h2>#Wearable Technology #Assistive Device ##Physical Computing #Machine Learning #Bioengineering #Rehabilitation Technology #Sensor Systems #Focus Group #User Interview #Qualitative Research #Data Processing #Arduino #IMU Sensor #TensorFlow #TinyML #Python #Jupyter Notebook</h2>
+                <!--Project details body-->
+                <p>PosturaFit is a wearable device aimed at improving knee injury rehabilitation through posture monitoring and correction. The device utilises sensor systems (gyroscopes and accelerometers) integrated with machine learning to analyse real-time movement data and determine if the user's knee posture is correct or incorrect. The system provides non-intrusive feedback through visual (LED) and haptic (vibration) cues, enabling users to maintain proper posture without disruption during their daily activities or rehabilitation exercises.</p>
+                <p>Research in biomechanics and rehabilitation technology highlights the critical role of posture in the recovery process, particularly after knee injuries. Maintaining correct alignment is essential to prevent further strain or injury. Existing solutions often rely on external monitoring tools that can be cumbersome or distracting, which can hinder patient compliance. This project addresses these limitations by combining wearable technology with real-time, automated feedback to create a seamless rehabilitation experience.</p>
+                <p>The device leverages bioengineering principles to integrate sensor systems and real-time machine learning analysis into a compact, easy-to-use format. This approach reflects a growing trend in assistive technology, aiming to empower individuals in their recovery process while reducing reliance on external medical supervision.</p>
+                <br>
+                <!--Project links-->
+                <div class="project-links">
+                    <!--Open in a separate tab-->
+                    <a href="work/20241228.pdf" target="_blank" rel="noopener noreferrer">FULL PORTFOLIO HERE</a><br>
+                    <a href="https://github.com/canacechen9/PosturaFit" target="_blank" rel="noopener noreferrer">GITHUB LINK HERE</a>
+                </div>
+            </section>
+        </div>
+    
+    </body>
+
+</html>
