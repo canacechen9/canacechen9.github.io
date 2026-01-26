@@ -1,7 +1,8 @@
 // Create a function to generate head content for html
 function printHTMLhead(){
     let text = `
-<link rel="stylesheet" href="style.css"> <!--link to css-->     
+<link rel="stylesheet" href="style.css"> <!--link to css-->    
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=0.7">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 <meta name="author" content="Canace Chen">
     `;
