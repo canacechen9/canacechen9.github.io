@@ -622,6 +622,11 @@ iframe.slide-item {
         flex: none;
     }
 
+
+    .project-details h2{
+      padding: 60px 5% 120px 5%;;
+    }
+
     /* Hide the custom cursor on mobile (it's confusing with touch) */
     /* #custom-cursor {
         display: none !important;
