@@ -6,7 +6,7 @@
 /* Ref: https://css-tricks.com/fixed-headers-on-page-links-and-overlapping-content-oh-my/ */
 html {
 	-webkit-text-size-adjust: 100%;
-  	text-size-adjust: 100%;
+  text-size-adjust: 100%;
 	scroll-padding-top: 130px; /* height of sticky header */
 }
 
@@ -24,25 +24,25 @@ body{
 /* Header & top navigation */
 .topnav{
 	position: -webkit-sticky; /* Safari */
-    position: sticky;
+  position: sticky;
 	top: 0;
-    z-index: 1000; /* Keeps it above your images/content */
-    width: 100%; 
-    box-sizing: border-box; /* Crucial: includes padding in the 100% width */
-    padding: 0px 30px;
+  z-index: 1000; /* Keeps it above your images/content */
+  width: 100%; 
+  box-sizing: border-box; /* Crucial: includes padding in the 100% width */
+  padding: 0px 30px;
 	background-color: inherit; /* Matches the body background */
 	display: flex;
-	align-items: flex-start;
+	align-items: center;
 	justify-content: space-between;
 }
 .nav-item{
 	font-size: 1.625rem;
 	color: var(--text-main);
 	text-decoration: none;
-    background: none;
+  background: none;
 	border: none;
-    cursor: pointer;
-    padding: 30px 0px;
+  cursor: pointer;
+  padding: 30px 0px;
 }
 
 /* This ensures no background appears even when hovering or clicking */
@@ -56,17 +56,17 @@ body{
 
 /* Ensure the middle item stays exactly centered regardless of side-item width */
 .toggle-container {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 	line-height: 1; 
 }
 
 #view-toggle {
-    /* Ensure the button itself has no extra margins or line-height issues */
-    line-height: 1;
-    padding: 0;
-    margin: 0;
+  /* Ensure the button itself has no extra margins or line-height issues */
+  line-height: 1;
+  padding: 0;
+  margin: 0;
 }
 
 .right-nav {
@@ -91,14 +91,22 @@ body{
 
 .right-group {
   display: flex;
-  align-items: flex-start; /* Aligns Back button with the top of the Info text */
+  align-items: center; /* Aligns Back button with the top of the Info text */
   gap: 20px; /* Space between Back and the Info/Resume stack */
+  margin-left: auto;
 }
 
 .info-stack {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-end; /* Aligns Info and Resume to the left */
+}
+
+.info-stack .resume-link{
+    position: absolute;
+    top: 90%; 
+    right: 0;
 }
 
 /* Show Resume on Hover */
@@ -356,11 +364,11 @@ body.light-ui {
 @media (max-width: 980px) {
 	/* Category page title */
 	.category-title h1{
-		padding: 25vw 5% 3vw 5%;
+		padding: 15vw 5% 3vw 5%;
 	}
 
   .grid-view .category-title h1{
-    padding: 15vw 20% 13vw 20%;
+    padding: 5vw 20% 5vw 20%;
   }
 
 	.projects{
@@ -402,11 +410,15 @@ body.light-ui {
   } 
 
 	.banner-container{
-		margin-bottom: 20vh;
+		margin-bottom: 10vh;
 	}
 
+  .index-view .project-item{
+    padding-right: 0;
+  }
+
 	.index-view .project-list{
-		padding: 10vh 0px 52vh 0px;
+		padding: 20vh 0px 52vh 0px;
 	}
 
 	.index-view .project-text{
@@ -414,18 +426,18 @@ body.light-ui {
 	}
 
 	/* Default state for project text on mobile */
-    .index-view .project-item .name,
-    .index-view .project-item .desc {
-      font-size: 1.5rem; 
-		  opacity: 0.6;
-    }
+  .index-view .project-item .name,
+  .index-view .project-item .desc {
+    font-size: 1.5rem; 
+    opacity: 0.6;
+  }
 
 	/* Active state triggered by the Intersection Observer */
-    .index-view .project-item.is-active .name,
-    .index-view .project-item.is-active .desc {
-        font-size: 1.875rem;
-        opacity: 1; /* Ensures it's fully bright when 'hovered' */
-    }
+  .index-view .project-item.is-active .name,
+  .index-view .project-item.is-active .desc {
+      font-size: 1.875rem;
+      opacity: 1; /* Ensures it's fully bright when 'hovered' */
+  }
 
     /* Remove dash shift*/
   .project-item:hover {
@@ -437,17 +449,17 @@ body.light-ui {
     transform: translateX(0);
   }
 
-    /* Move Preview Image to Bottom Middle */
-    #project-preview-container {
-        right: 50%;
-        left: 50%;
-        transform: translateX(-50%); /* Centers it horizontally */
-        top: auto;
-        bottom: 10%; /* Distance from bottom */
-        width: 60vw; /* Larger on mobile */
-        height: 40vh;
-        /* max-height: 40vh; */
-    }
+  /* Move Preview Image to Bottom Middle */
+  #project-preview-container {
+      right: 50%;
+      left: 50%;
+      transform: translateX(-50%); /* Centers it horizontally */
+      top: auto;
+      bottom: 10%; /* Distance from bottom */
+      width: 60vw; /* Larger on mobile */
+      height: 40vh;
+      /* max-height: 40vh; */
+  }
 
 	#project-preview-image {
 		width: 100%;
@@ -622,9 +634,8 @@ iframe.slide-item {
         flex: none;
     }
 
-
     .project-details h2{
-      padding: 60px 5% 120px 5%;;
+      padding: 30px 5% 20px 5%;;
     }
 
     /* Hide the custom cursor on mobile (it's confusing with touch) */
