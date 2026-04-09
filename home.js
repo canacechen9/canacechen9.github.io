@@ -86,18 +86,24 @@ document.addEventListener('DOMContentLoaded', () => {
 const track = document.getElementById('track');
 const originalContent = document.getElementById('original-content');
 
-const clone = originalContent.cloneNode(true);
-track.appendChild(clone);
+// Calculate how many clones is needed to fill the screen plus buffer
+const screenWidth = window.innerWidth;
+const originalWidth = originalContent.offsetWidth;
+
+// Keep cloning until the track is long enough to never show a gap (3x the screen width to be safe)
+while (track.offsetWidth < (screenWidth * 3)) {
+    const clone = originalContent.cloneNode(true);
+    track.appendChild(clone);
+}
 
 let currentX = 0; 
-let lastSnappedItem = null;
-const speed = 2;
+const speed = 2; 
 
 function animate() {
   currentX -= speed;
 
   // Reset loop when the first set of items has fully passed
-  if (Math.abs(currentX) >= originalContent.offsetWidth) {
+  if (Math.abs(currentX) >= originalWidth) {
     currentX = 0;
   }
 
@@ -105,7 +111,6 @@ function animate() {
   requestAnimationFrame(animate);
 }
 
-// Start the animation
 animate();
 
 // function animate() {
