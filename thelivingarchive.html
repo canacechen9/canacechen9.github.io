@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">                     <!--The language of this page-->
+    <head>
+        <meta charset="UTF-8"> <!--HTML5 spec encourages developers to use this-->
+        <script src="constant.js"></script> <!--Link to javascript-->
+        <script src="project.js" defer></script>
+        <script>printHTMLhead();</script>
+        <title>The Living Archive</title>  <!--Title that appears on the browser tab/window bar-->
+        <meta name="description" content="Canace Chen's Website: The Living Archive">
+    </head>
+
+    <body style="--project-color: #360707; --text-color: #fff; --text-color-greyed: #999;" >
+        <!--top navigation bar: link to home and previous page-->
+        <div class="projectnav" id="projectnav">
+            <script>printHTMLprojectnav();</script>
+        </div>
+
+        <div class="project-wrapper" id="project-config" 
+     data-slides='[
+            { "type": "video", "url": "work/20260505.mp4" }
+            ]'>
+            <!--Gallery slide-->
+            <div class="slide-viewport" id="slideArea">
+                <div class="media-frame">
+                </div>
+                
+                <div id="custom-cursor">NEXT</div>
+            </div>
+            <!--Project key info-->
+            <div class="project-info-bar">
+                <div class="info-item info-left">The Living Archive</div>
+                <div class="info-item info-center">May 05 2026</div>
+                <div class="info-item info-right">Experiment Work</div>
+            </div>
+            <!--Project details-->
+            <section class="project-details">
+                <!--Project summary tags-->
+                <h2>#Immersive Experience #Interactive Panorama #WebXR #Google AI Studio #Public Engagement #Digital Heritage #Cultural Preservation #Accessibility #Rapid Prototyping #Virtual Museum #Human-Centered Design</h2>
+                <!--Project details body-->
+                <P>Role: Individual Project</P>
+                <p>Overview</p>
+                <p>The Living Archive is a web-based 360° interactive platform exploring how heritage experiences can be reimagined for contemporary digital audiences. Using Blenheim Palace as a prototype site, the project transforms the Great Hall, the Saloon, and the Long Library into a digital journey where users can explore architectural and historical narratives through immersive interaction.</p>
+                <p>Problem / Purpose</p>
+                <p>Traditional historical sites often rely on physical access or dense interpretive text, making them difficult to engage with for remote users, younger audiences, and visitors with accessibility needs. The Living Archive was developed as a lightweight and scalable alternative, exploring how generative AI and browser-based technologies can translate complex historical and architectural information into a more intuitive, accessible, and engaging digital experience.</p>
+                <p>Process</p>
+                <p>I designed and built the interaction system and spatial user experience of the prototype, focusing on how users navigate and engage with layered historical content within a 3D environment. I chose a WebXR/Browser-based tech over a standalone app to maximise accessibility and ease of use, allowing users to access the experience instantly across desktop and mobile devices. Using Google AI Studio, I synthesised architectural records and historical data into structured content, and integrated Pannellum as the 360° panorama framework.</p>
+                <p>A key design decision was moving away from traditional click-to-read interfaces and introducing layered multimodal interactions — hover for quick insights, click for deeper exploration — allowing users to remain visually anchored in the space while progressively uncovering information. The interface was intentionally minimal and translucent, preserving the architecture as the primary focus while providing clear navigational cues.</p>
+                <p>Outcome</p>
+                <p>The project resulted in a functional and responsive 360° prototype that loads efficiently across desktop and mobile devices, demonstrating how immersive heritage experiences can remain lightweight, accessible, and adaptable. It also explores the potential of generative AI in rapid prototyping and full-stack experience development with minimal traditional coding.</p>
+                <br>
+                <!--Project links-->
+                <div class="project-links">
+                    <!--Open in a separate tab-->
+                    <a href="https://ai.studio/apps/93739edc-b6da-4784-bc71-bacc80c1acaf?fullscreenApplet=true" target="_blank" rel="noopener noreferrer">DEMO EXPERIENCE HERE</a>
+                </div>
+            </section>
+        </div>
+    
+    </body>
+
+</html>
