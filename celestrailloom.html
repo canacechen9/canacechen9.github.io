@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">                     <!--The language of this page-->
+    <head>
+        <meta charset="UTF-8"> <!--HTML5 spec encourages developers to use this-->
+        <script src="constant.js"></script> <!--Link to javascript-->
+        <script src="project.js" defer></script>
+        <script>printHTMLhead();</script>
+        <title>CELESTIAL LOOM // 浑天</title>  <!--Title that appears on the browser tab/window bar-->
+        <meta name="description" content="Canace Chen's Website: CELESTIAL LOOM // 浑天">
+    </head>
+
+    <body style="--project-color: #000; --text-color: #fff; --text-color-greyed: #999;" >
+        <!--top navigation bar: link to home and previous page-->
+        <div class="projectnav" id="projectnav">
+            <script>printHTMLprojectnav();</script>
+        </div>
+
+        <div class="project-wrapper" id="project-config" 
+     data-slides='[
+            { "type": "video", "url": "work/20260615.mp4" }
+            ]'>
+            <!--Gallery slide-->
+            <div class="slide-viewport" id="slideArea">
+                <div class="media-frame">
+                </div>
+                
+                <div id="custom-cursor">NEXT</div>
+            </div>
+            <!--Project key info-->
+            <div class="project-info-bar">
+                <div class="info-item info-left">CELESTIAL LOOM // 浑天</div>
+                <div class="info-item info-center">Jun 11 2026</div>
+                <div class="info-item info-right">Experiment Work</div>
+            </div>
+            <!--Project details-->
+            <section class="project-details">
+                <!--Project summary tags-->
+                <h2>#Real-time Audio #Motion-reactive Visual #Three.js #React.js #React Three Fiber #Cosmological Philosophy #Web Audio API #3D Graphics #GLSL #Vite #Point Cloud</h2>
+                <!--Project details body-->
+                <P>Role: Individual Project</P>
+                <p>CELESTIAL LOOM // 浑天 is a browser-based audio-visual experience inspired by the mathematical elegance of ancient astronomical instruments and Chinese Cosmological Philosophy. The experience mirrors the cosmic genesis narrative, transitioning between Wuji (无极)—the formless, chaotic primordial state where particles drift freely in fluid motion—and Taiji (太极)—the structured state of reality where the core locks into a rigid, symmetrical lattice grid. By nesting three concentric rings around a unified core, the project visualises the Three Realms (三界): Heaven, Earth, and Humanity, exploring the delicate balance between structural order, human agency, and cosmic harmony.</p><br>
+                <p>The interaction design physically embeds this philosophical relationship into the user interface. Humanity acts as the active force, surrendering its rotation and velocity directly to the user’s mouse and high-frequency "treble" bursts. Humans cannot directly manipulate Earth; instead, the Earth ring deforms and ripples texturally via midrange frequencies only through its close spatial proximity to Humanity, reflecting our inability to control the planet, yet our constant influence over it. Heaven remains completely untouchable by the mouse, acting as a lung-like cosmic echo that breathes via low-frequency "bass" notes, sending a radiant alignment wavefront down through the entire system only when all elements achieve collective structural harmony.</p><br>
+                <p>Built with React Three Fiber and Three.js, the application streams real-time frequency spectrum data from the Web Audio API directly into custom GLSL Vertex and Fragment Shaders. The core engineering challenge was rendering the physical "fight" between order and chaos without breaking the strict performance constraints required for smooth, interactive 3D. This was solved by mapping all coordinate interpolations directly into native GLSL shaders, enabling the GPU to swizzle and mix positions instantly via frame-rate independent linear interpolation (lerp).</p>
+                <br>
+                <!--Project links-->
+                <div class="project-links">
+                    <!--Open in a separate tab-->
+                    <a href="https://celestial-loom.vercel.app/" target="_blank" rel="noopener noreferrer">LIVE EXPERIENCE HERE</a><br>
+                    <a href="https://github.com/canacechen9/WebGL/tree/main/celestial-loom" target="_blank" rel="noopener noreferrer">GITHUB LINK HERE</a>
+                </div>
+            </section>
+        </div>
+    
+    </body>
+
+</html>
