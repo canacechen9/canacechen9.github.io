@@ -2,32 +2,9 @@
 <html lang="en">                     <!--The language of this page-->
     <head>
         <meta charset="UTF-8"> <!--HTML5 spec encourages developers to use this-->
-        <script>
-            (function () {
-                try {
-                // Test if localStorage is accessible
-                localStorage.setItem('_storage_test', '1');
-                localStorage.removeItem('_storage_test');
-                } catch (e) {
-                // If blocked, replace localStorage with a safe, temporary in-memory object
-                var memoryStorage = {};
-                Object.defineProperty(window, 'localStorage', {
-                    configurable: true,
-                    value: {
-                    getItem: function (key) { return memoryStorage.hasOwnProperty(key) ? memoryStorage[key] : null; },
-                    setItem: function (key, value) { memoryStorage[key] = String(value); },
-                    removeItem: function (key) { delete memoryStorage[key]; },
-                    clear: function () { memoryStorage = {}; },
-                    key: function (i) { return Object.keys(memoryStorage)[i] || null; },
-                    get length() { return Object.keys(memoryStorage).length; }
-                    }
-                });
-                }
-            })();
-        </script>
         <script src="constant.js"></script> <!--Link to javascript-->
-        <script src="home.js" defer></script>
         <script>printHTMLhead();</script>
+        <script src="home.js" defer></script>
         <title>Canace Chen</title>  <!--Title that appears on the browser tab/window bar-->
         <meta name="description" content="A portfolio website for Canace Chen (Creative Technologist).">
     </head>
