@@ -45,7 +45,19 @@ function updateMedia() {
     
     element.src = item.url;
     element.className = 'slide-item';
-    mediaFrame.appendChild(element);
+    
+    // Check if a link is provided for this slide
+    if (item.link) {
+        const linkWrapper = document.createElement('a');
+        linkWrapper.href = item.link;
+        linkWrapper.target = '_blank';
+        linkWrapper.rel = 'noopener noreferrer';
+        linkWrapper.className = 'slide-link';
+        linkWrapper.appendChild(element);
+        mediaFrame.appendChild(linkWrapper);
+    } else {
+        mediaFrame.appendChild(element);
+    }
 }
 
 // 2. Click Logic

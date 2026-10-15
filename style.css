@@ -512,6 +512,14 @@ body.light-ui {
 	flex-shrink: 0;
 }
 
+.media-frame a.slide-link {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none; /* Removes any default anchor underline */
+}
+
 iframe.slide-item {
   border: none;       /* Removes the default browser border */
   height: 100%;      
